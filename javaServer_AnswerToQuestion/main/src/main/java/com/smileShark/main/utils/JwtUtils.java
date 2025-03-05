@@ -22,7 +22,7 @@ public class JwtUtils {
         user.setUserName(claims.get("userName").toString());
         return user;
     }
-    public static String GenJwt(String userId,String password,String userName){
+    public static String createJwt(String userId,String password,String userName){
         Map<String,Object> claims=new HashMap<>();
         claims.put("userId",userId);
         claims.put("password",password);

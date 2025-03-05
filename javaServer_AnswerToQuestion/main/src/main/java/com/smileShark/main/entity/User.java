@@ -3,10 +3,12 @@
     import com.fasterxml.jackson.annotation.JsonProperty;
     import lombok.Data;
     import lombok.Getter;
+    import org.springframework.stereotype.Component;
 
     @Data
+    @Component
     public class User {
         private String userId;
-        private String UserPassword;
-        private String UserName;
+        private String userPassword;
+        private String userName;
     }

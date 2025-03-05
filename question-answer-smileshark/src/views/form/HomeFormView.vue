@@ -1,5 +1,5 @@
 <template>
-  <el-container :class="{ 'bg': backgroungColorIsTrue }">
+  <el-container :class="backgroungColorIsTrue?'bg':'bg-light'">
     <el-header>
       <el-row>
         <el-col :xs="11" :sm="11" :md="9" :lg="7" :xl="6">
@@ -46,11 +46,6 @@
 
 <script>
 /* eslint-disable */
-window.addEventListener('popstate', function (event) {
-  event.preventDefault()
-  localStorage.removeItem('token')
-  window.location.href = '/'
-})
 export default {
   data() {
     return {
@@ -82,7 +77,7 @@ export default {
     },
     exitToolBox() {
       localStorage.removeItem('token')
-      window.history.back()
+      this.$router.push('/login');
     },
     ToCompleteDaily() {
       window.location.href.includes('CompleteDaily') ? '' : this.$router.push('/CompleteDaily');
@@ -245,6 +240,9 @@ body>.el-container {
   background: linear-gradient(-45deg, #dae, #f66, #3c9, #09f, #66f);
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
+}
+.bg-light{
+  background:white;
 }
 
 @keyframes gradient {

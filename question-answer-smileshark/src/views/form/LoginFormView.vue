@@ -2,7 +2,7 @@
   <div>
     <link rel="stylesheet" type="text/css" href="../../css/card.css">
     <div class="loginBox card">
-      <h2>login</h2>
+      <h2>登录 <span style="font-size: 30px;color:rgb(33, 184, 95)">Shark Tool</span></h2>
       <form action="">
         <div class="item">
           <input type="text" v-model="userName" id="userName" required>
@@ -26,16 +26,16 @@
 
 <script>
 import axios from '../../axios.js'
-window.onload = function () {
-  if (localStorage.getItem('token') && localStorage.getItem('token').length > 7) {
-    axios.post('/javaSever/loginIn').then(res => {
-      console.log(res.data)
-      if (res.data) {
-        location.assign('/#/main')
-      }
-    })
-  }
-}
+// window.onload = function () {
+//   if (localStorage.getItem('token') && localStorage.getItem('token').length > 7) {
+//     axios.post('/javaSever/loginIn').then(res => {
+//       console.log(res.data)
+//       if (res.data) {
+//         location.assign('/#/main')
+//       }
+//     })
+//   }
+// }
 /* eslint-disable */
 export default {
   data() {
@@ -52,7 +52,7 @@ export default {
         spinner: 'el-icon-loading',
         background: 'rgba(0, 0, 0, 0.7)'
       });
-      axios.post('/javaSever/login', { UserId: this.userName, UserPassword: this.password, UserName: null }).then(res => {
+      axios.post('/javaSever/login', { userId: this.userName, userPassword: this.password}).then(res => {
         //登陆成功就转跳页面,失败就输出返回信息
         if (res.data.success) {
           window.localStorage.setItem('token', res.data.data.token)
@@ -60,9 +60,8 @@ export default {
           this.trueMessage(res.data.message)
           loading.close();
           //跳转页面
-          location.assign('/#/main')
+          this.$router.push('/main')
 
-          // document.getElementsByTagName('body')[0].style.display = 'block'
         } else {
           this.errorMessage(res.data.message)
           loading.close();
@@ -85,6 +84,15 @@ export default {
         type: 'success',
         duration: 1000
       });
+    }
+  },
+  created(){
+    if (localStorage.getItem('token')) {
+      axios.post('/javaSever/loginIn').then(res => {
+        if (res.data.success) {
+          this.$router.push('/main')
+        }
+      })
     }
   }
 }

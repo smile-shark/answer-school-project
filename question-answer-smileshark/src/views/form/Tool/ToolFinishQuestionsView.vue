@@ -3,8 +3,8 @@
         <div class="select-questions-title">
             <span>Automatic Answering Tool</span><span style="font-size: 12px;"></span>
         </div>
-        <el-form ref="form" :model="form" label-width="80px" style="line-height: 50px;">
-            <el-tooltip class="item" effect="dark" content="可选项" placement="top">
+        <el-form ref="form" :model="form" label-width="80px" style="line-height: 50px;display:flex;justify-content: center;align-items: center;">
+
                 <el-form-item label="课程名称">
                     <el-select filterable clearable v-model="form.selectCourseName" placeholder="请选择课程"
                         @change="changeCourse">
@@ -12,8 +12,7 @@
                             :value="item.courseId"></el-option>
                     </el-select>
                 </el-form-item>
-            </el-tooltip>
-            <el-tooltip class="item" effect="dark" content="可选项" placement="top">
+
                 <el-form-item label="章节名称">
                     <el-select filterable clearable v-model="form.selectChapterName" placeholder="请选择章节"
                         @change="changeChapter">
@@ -21,15 +20,12 @@
                             :label="item.chapterTitle + '：' + item.chapterName" :value="item.chapterId"></el-option>
                     </el-select>
                 </el-form-item>
-            </el-tooltip>
-            <el-tooltip class="item" effect="dark" content="可选项" placement="top">
                 <el-form-item label="小节名称">
                     <el-select filterable clearable v-model="form.selectSubsectionName" placeholder="请选择小节">
                         <el-option v-for="(item, index) in subsectionList" v-bind:key="index"
                             :label="item.subsectionName" :value="item.subsectionId"></el-option>
                     </el-select>
                 </el-form-item>
-            </el-tooltip>
         </el-form>
         <el-row>
             <el-button type="primary" @click.prevent="start" :disabled="isStart">点击开始</el-button>
@@ -102,7 +98,7 @@ export default {
             this.form.selectSubsectionName = ''
             this.subsectionList = []
             axios.post('/javaSever/selectChapter', { courseId: this.form.selectCourseName }).then(res => {
-                if (res.data.code != 0) {
+                if (res.data.code != 200) {
                     if (res.data.message == '身份验证失败') {
                         localStorage.removeItem('token')
                         this.loading = false
@@ -129,7 +125,7 @@ export default {
             this.form.selectSubsectionName = ''
             this.subsectionList = []
             axios.post('/javaSever/selectSubsection', { chapterId: this.form.selectChapterName }).then(res => {
-                if (res.data.code != 0) {
+                if (res.data.code != 200) {
                     if (res.data.message == '身份验证失败') {
                         localStorage.removeItem('token')
                         this.loading = false
@@ -222,7 +218,7 @@ export default {
                 return
             }
             axios.post('/javaSever/finishState', { subsectionId: this.subsectionIdList[this.index] }).then(res => {
-                if (res.data.code != 0) {
+                if (res.data.code != 200) {
                     if (res.data.message == '身份验证失败') {
                         localStorage.removeItem('token')
                         this.loading = false
@@ -271,7 +267,7 @@ export default {
     },
     mounted() {
         axios.post('/javaSever/selectCourse', {}).then(res => {
-            if (res.data.code != 0) {
+            if (res.data.code != 200) {
                 if (res.data.message == '身份验证失败') {
                     localStorage.removeItem('token')
                     this.loading = false

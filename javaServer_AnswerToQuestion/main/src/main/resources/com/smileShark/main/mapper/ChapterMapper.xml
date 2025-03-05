@@ -10,4 +10,12 @@
         insert into chapter(chapter_id,chapter_title,chapter_name,course_id) values
         (#{chapter.chapterId},#{chapter.chapterTitle},#{chapter.chapterName},#{chapter.courseId})
     </insert>
+    <select id="selectChapterByCourseId" resultType="chapter">
+        select * from chapter
+        <where>
+            <if test="courseId!= null">
+                course_id = #{courseId}
+            </if>
+        </where>
+    </select>
 </mapper>

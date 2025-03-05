@@ -12,4 +12,5 @@ import java.util.List;
 public interface ChapterMapper {
     List<Chapter> selectAllChapter();
     int addChapter(@Param("chapter") Chapter chapter);
+    List<Chapter> selectChapterByCourseId(@Param("courseId") String courseId);
 }

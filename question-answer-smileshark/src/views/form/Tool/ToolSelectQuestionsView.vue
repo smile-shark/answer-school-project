@@ -9,13 +9,13 @@
         </label></span>
     </div>
     <div class="select-questions-content" v-loading="loading">
-      <div class="question-answer-container" v-for="(item, index) in answerList.data" v-bind:key="index">
-        <div class="question-title" v-html="'第' + (index + 1) + '题:' + item.questionTitle"
+      <div class="question-answer-container" v-for="(item, index) in answerList.questions" v-bind:key="index">
+        <div class="question-title" v-html="'第' + (index + 1) + '题:\n' + item.question"
           style="font-weight:bold;font-size: 18px;"></div>
         <div class="answer-list">
-          <div v-for="(answer, indexA) in item.answerList" v-bind:key="indexA"
-            v-html="'答案' + (indexA + 1) + ':' + answer.answerContent"
-            :style="{ color: answer.isTrue ? '#67c23a' : 'black', fontWeight: answer.isTrue ? 'bold' : 'normal' }"
+          <div v-for="(answer, indexA) in item.answers" v-bind:key="indexA"
+            v-html="'答案' + (indexA + 1) + ':' + answer.answer"
+            :style="{ color: answer.answerId!='该位置为错误答案' ? '#67c23a' : 'black', fontWeight: answer.isTrue ? 'bold' : 'normal' }"
             class="answer-item-box">
           </div>
         </div>
@@ -55,7 +55,7 @@ export default {
       }
       this.loading = true
       axios.post('/javaSever/selectAnswers', { question: this.searchStr, index: this.pageIndex }).then(res => {
-        if (res.data.code != 0) {
+        if (res.data.code != 200) {
           if (res.data.message == '身份验证失败') {
             this.loading = false
             this.$message({
@@ -72,15 +72,13 @@ export default {
           }
           return
         }
-        let obj = res.data.data
-        this.answerList = this.filteredAnswerList(obj)
+        this.answerList = res.data.data
         this.loading = false
         this.$message({
           message: res.data.message,
           type: 'success'
         })
-      })
-        .catch(err => {
+      }).catch(err => {
           console.log(err)
           this.loading = false
           this.$message({
@@ -93,6 +91,7 @@ export default {
       this.pageIndex = pag
       this.searchQuestions()
     },
+    /**
     filteredAnswerList(obj) {
       for (let question of obj.data) {
         for (let i = 3; i >= 0; i--) {
@@ -102,7 +101,7 @@ export default {
         }
       }
       return obj
-    }
+    } */
   }
 }
 </script>

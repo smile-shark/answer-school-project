@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smileShark.main.mapper.SubsectionMapper">
+    <insert id="insertSubsection">
+        insert into subsection
+        (subsection_id,subsection_name,course_id,chapter_id)
+        values
+        (#{subsection.subsectionId},#{subsection.subsectionName},#{subsection.courseId},#{subsection.chapterId})
+    </insert>
+    <select id="selectSubsectionByChapterId">
+        select * from subsection
+        <where>
+            <if test="chapterId!= null">
+                chapter_Id = #{chapterId}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -29,6 +29,13 @@ public class Result {
             setMessage("success");
         }};
     }
+    public static Result success(String message) {
+        return new Result() {{
+            setCode(200);
+            setSuccess(true);
+            setMessage(message);
+        }};
+    }
 
     public static Result success(Object o) {
         return new Result() {{
@@ -37,5 +44,30 @@ public class Result {
             setMessage("success");
             setData(o);
         }};
+    }
+
+    public Result setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    public Result setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+
+    public Result setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+
+    public Result setData(Object data) {
+        this.data = data;
+        return this;
+    }
+
+    public Result setTime(Long time) {
+        this.time = time;
+        return this;
     }
 }
