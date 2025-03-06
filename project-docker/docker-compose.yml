@@ -1,4 +1,5 @@
 version: "3.8"
+
 services:
   mysql:
     image: mysql
@@ -9,9 +10,10 @@ services:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - /sql-file/init.sql:/docker-entrypoint-initdb.d/init.sql 
+      - /sql-file/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - smile-shark-net
+
   school-server:
     build:
       context: .
@@ -20,7 +22,9 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - smile-shark-net  nginx:
+      - smile-shark-net
+
+  nginx:
     image: nginx
     container_name: school-client
     ports:
@@ -30,6 +34,7 @@ services:
       - "/client/html:/usr/share/nginx/html"
     networks:
       - smile-shark-net
+
 networks:
   smile-shark-net:
     name: smileshark
