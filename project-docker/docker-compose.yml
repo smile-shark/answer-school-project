@@ -20,10 +20,7 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - smile-shark-net
-    depends_on:
-      - mysql-school-question
-  nginx:
+      - smile-shark-net  nginx:
     image: nginx
     container_name: school-client
     ports:
@@ -31,8 +28,6 @@ services:
     volumes:
       - "/client/nginx.conf:/etc/nginx/nginx.conf"
       - "/client/html:/usr/share/nginx/html"
-    depends_on:
-      - school-server
     networks:
       - smile-shark-net
 networks:

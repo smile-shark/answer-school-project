@@ -1,6 +1,6 @@
 FROM openjdk:22-jdk-slim
 
-RUN apt update && apt install -y python python-pip && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y python3 python3-pip && rm -rf /var/lib/apt/lists/*
 RUN pip install pymysql requests asyncio aiohttp --break-system-packages
 
 WORKDIR /app
