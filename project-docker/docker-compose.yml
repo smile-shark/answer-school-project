@@ -9,7 +9,7 @@ services:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - /sql/init.sql:/docker-entrypoint-initdb.d/init.sql  # 挂载 SQL 文件
+      - /sql-file/init.sql:/docker-entrypoint-initdb.d/init.sql  # 挂载 SQL 文件
     networks:
       - smile-shark-net
   school-server:
