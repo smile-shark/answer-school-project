@@ -1,26 +1,18 @@
-# 使用官方 OpenJDK 镜像作为基础镜像
-FROM openjdk:22-jdk
+#     ^t   ^x ^v  OpenJDK  ^u^| ^c^o  ^|    ^=   ^` ^u^| ^c^o
+FROM openjdk:22-jdk-slim
 
-# 安装 Python3
-RUN apt-get update && apt-get install -y python3 && rm -rf /var/lib/apt/lists/*
-RUN pip install pymysql
-RUN pip install datetime
-RUN pip install requests
-RUN pip install json
-RUN pip install time
-RUN pip install sys
-RUN pip install os
-RUN pip install asyncio
-RUN pip install aiohttp
+#   ^i  ^e Python3
+RUN apt update && apt install -y python3 python3-pip && rm -rf /var/lib/apt/lists/*
+RUN pip install pymysql requests asyncio aiohttp --break-system-packages
 
-# 设置工作目录
+#            ^| ^{   ^u
 WORKDIR /app
 
-# 复制 Java 程序
+#   ^m ^h  Java   ^k  ^o
 COPY java-app /app/java-app
 
-# 复制 Python 脚本
+#   ^m ^h  Python  ^d^z ^|
 COPY python-scripts /app/python-scripts
 
-# 设置容器启动命令
+#           ^y  ^p  ^j  ^q
 CMD ["java", "-jar", "java-app", "java-app/shcool-answer-question-server.jar"]
