@@ -1,4 +1,4 @@
-host = "localhost"
-user = "root"
-password = "123456"
+host = "mysql-school-question"
+user = "smileshark"
+password = "smileshark123456"
 database = "school_question_data"
