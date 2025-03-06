@@ -78,4 +78,11 @@ public class PythonScript {
                 user.getUserPassword()
         );
     }
+    // 收录新答案
+    public void saveNewAnswer(String courseId) throws IOException, InterruptedException {
+        PythonScriptsUtils.usePythonScript(
+                pythonPath.PYTHON_SCRIPTS_PATH_GET_NEW_ANSWERS,
+                courseId
+        );
+    }
 }

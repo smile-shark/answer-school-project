@@ -18,4 +18,6 @@ public class PythonResult {
     private Integer questionCount;
     private List<String> subsectionTdList;
     private String questionData;
+    private String finishContent;
+    private Integer finishCount;
 }

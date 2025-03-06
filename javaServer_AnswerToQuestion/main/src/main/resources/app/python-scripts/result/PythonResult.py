@@ -7,7 +7,8 @@ result = {
     "courses": [],
     "questionCount":0,
     "subsectionTdList":[],
-    "finishContent":""
+    "finishContent":"",
+    "finishCount":0
 }
 
 

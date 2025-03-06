@@ -1,5 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import HomeView from '../views/form/HomeFormView.vue'
+import ShowContentView from '../views/form/ShowContentView.vue'
+import LoginView from '../views/form/LoginFormView.vue'
+import ToolSelectQuestionsView from '../views/form/Tool/ToolSelectQuestionsView.vue'
+import ToolFinishQuestionsView from '../views/form/Tool/ToolFinishQuestionsView.vue'
+import CompleteDailySummaryView from '../views/form/Tool/CompleteDailySummaryView.vue'
 
 Vue.use(VueRouter)
 
@@ -12,77 +18,34 @@ const routes = [
   {
     path: '/main',
     name: 'name',
-    component: () => import('../views/form/HomeFormView.vue'),
+    component: HomeView,
     children: [
       {
         path: '',
         name: 'home',
-        component: () => import('../views/form/ShowContentView.vue')
+        component: ShowContentView
       },
       {
         path: '/SelectTool',
         name: 'selectTool',
-        component: () => import('../views/form/Tool/ToolSelectQuestionsView.vue')
+        component: ToolSelectQuestionsView
       },
       {
         path: '/FinishTool',
         name: 'finishTool',
-        component: () => import('../views/form/Tool/ToolFinishQuestionsView.vue')
+        component: ToolFinishQuestionsView
       }, {
         path: '/CompleteDaily',
         name: 'completeDaily',
-        component: () => import('../views/form/Tool/CompleteDailySummaryView.vue')
+        component: CompleteDailySummaryView
       }
     ]
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/form/LoginFormView.vue')
+    component: LoginView
   }
-  // {
-  //   path: '/',
-  //   name: 'login',
-  //   component: () => import('../views/form/LoginFormView.vue'),
-  //   meta: { requiresAuth: false }
-  // },
-  // {
-  //   path: '/main',
-  //   component: () => import('../views/form/HomeFormView.vue'),
-  //   children: [
-
-  //     {
-  //       path: '/home',
-  //       name: 'home',
-  //       component: () => import('../views/form/ShowContentView.vue')
-  //     },
-  //     {
-  //       path: '/SelectTool',
-  //       name: 'selectTool',
-  //       component: () => import('../views/form/ToolSelectQuestionsView.vue')
-  //     }
-  //   ]
-  // }
-  // {
-  //   path: '/',
-  //   name: 'main',
-  //   component: HomeView
-  // },
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: ShowContentView
-  // },
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component: LoginView
-  // },
-  // {
-  //   path: '/SelectTool',
-  //   name: 'selectTool',
-  //   component: ToolSelectQuestionsView
-  // }
 ]
 
 const router = new VueRouter({

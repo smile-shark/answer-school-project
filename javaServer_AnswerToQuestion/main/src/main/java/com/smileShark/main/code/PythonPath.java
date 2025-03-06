@@ -25,4 +25,6 @@ public class PythonPath {
     public String PYTHON_SCRIPTS_PATH_GET_ANSWERS_1;
     @Value("${ANSWER_QUESTION_BY_SECTION}")
     public String PYTHON_SCRIPTS_PATH_ANSWER_QUESTION_BY_SECTION;
+    @Value("${GET_NEW_ANSWERS}")
+    public String PYTHON_SCRIPTS_PATH_GET_NEW_ANSWERS;
 }

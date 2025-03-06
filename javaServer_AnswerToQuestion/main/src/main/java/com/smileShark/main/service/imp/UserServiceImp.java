@@ -9,6 +9,7 @@ import com.smileShark.main.entity.User;
 import com.smileShark.main.mapper.ChapterMapper;
 import com.smileShark.main.mapper.CourseMapper;
 import com.smileShark.main.mapper.SubsectionMapper;
+import com.smileShark.main.mapper.UserMapper;
 import com.smileShark.main.script.PythonScript;
 import com.smileShark.main.service.UserService;
 import com.smileShark.main.utils.IPAddressUtils;
@@ -30,6 +31,8 @@ public class UserServiceImp implements UserService {
     private ChapterMapper chapterMapper;
     @Autowired
     private SubsectionMapper subsectionMapper;
+    @Autowired
+    private UserMapper userMapper;
 
     @Override
     public String login(Request request, HttpServletRequest httpServletRequest) {
@@ -63,6 +66,13 @@ public class UserServiceImp implements UserService {
                         setUserName(login.getUser().getUserName());
                         setUserPassword(request.getUserPassword());
                     }};
+
+                    try {
+                        if(userMapper.insertUser(user)>0){
+                            log.info("用户存储成功：{}",user.getUserName());
+                        }
+                    }catch (Exception _){
+                    }
                     try {
                         PythonResult pythonResult = pythonScript.saveSomeCourseId(user);
                         if (pythonResult.getIsGetCourseId()) {
@@ -101,6 +111,10 @@ public class UserServiceImp implements UserService {
                                 });
                                 try {
                                     int i = courseMapper.insertCourse(course);
+                                    if(i>0){
+                                        log.info("课程存储成功：{}",course.getCourseName());
+                                        pythonScript.saveNewAnswer(course.getCourseId());
+                                    }
                                     System.out.println("课程添加：" + i);
                                 } catch (Exception _) {
                                 }

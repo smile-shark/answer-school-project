@@ -74,7 +74,7 @@ def get_SubID():
                 question.append(questioned['id'])
                 PythonResult.result['questionCount'] += 1
 
-        except :
+        except:
             PythonResult.getResultFalseLogin()
         questioning.close()
     PythonResult.result['subsectionTdList'] = SubsectionID

@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class PythonScriptsUtils {
     public static PythonResult usePythonScript(String scriptPath, String... params) throws IOException, InterruptedException {
         // 调用python脚本
-        Process process = Runtime.getRuntime().exec(String.format("python %s %s", scriptPath, String.join(" ", params)));
+        Process process = Runtime.getRuntime().exec(String.format("python3 %s %s", scriptPath, String.join(" ", params)));
         // 获取python输出
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         StringBuilder json = new StringBuilder();
