@@ -23,6 +23,9 @@ public class ServerFilter implements Filter {
 
         HttpServletRequest req= (HttpServletRequest) servletRequest;
         HttpServletResponse resp=(HttpServletResponse) servletResponse;
+        resp.setContentType("application/json;charset=UTF-8");
+        resp.setCharacterEncoding("UTF-8");
+
         String url=req.getRequestURL().toString();
 
         log.info("请求的url：{}",url);
@@ -33,27 +36,29 @@ public class ServerFilter implements Filter {
         }
         String jwt= req.getHeader("token");
 
-        if(!StringUtils.hasLength(jwt)){
+        if (!StringUtils.hasLength(jwt)) {
             log.info("token为空，拦截请求...");
-            Result error=new Result();
+            Result error = new Result();
             error.setCode(401);
             error.setMessage("请先登录");
-            System.out.println("error:"+error);
-            String notLogin= JSONObject.toJSONString(error);
-            resp.getWriter().write(notLogin);
+            System.out.println("error:" + error);
+            resp.getWriter().write(JSONObject.toJSONString(error));
+            resp.getWriter().flush(); // 刷新缓冲区
+            resp.getWriter().close(); // 关闭流
             return;
         }
-        //解析token，判断是否合法
+
+        // 解析token，判断是否合法
         try {
             JwtUtils.parseJWT(jwt);
-        }catch(Exception e){
+        } catch (Exception e) {
             log.info("token解析失败，拦截请求...");
-            Result error=new Result();
+            Result error = new Result();
             error.setCode(401);
             error.setMessage("身份验证失败");
-            String tokenError= JSONObject.toJSONString(error);
-            resp.setContentType("application/json;charset=UTF-8");
-            resp.getWriter().write(tokenError);
+            resp.getWriter().write(JSONObject.toJSONString(error));
+            resp.getWriter().flush(); // 刷新缓冲区
+            resp.getWriter().close(); // 关闭流
             return;
         }
         log.info("令牌合法，放行");
