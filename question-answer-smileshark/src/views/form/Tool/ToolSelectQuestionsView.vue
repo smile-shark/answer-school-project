@@ -33,7 +33,7 @@
 
 <script>
 /* eslint-disable */
-import axios from '../../../axios.js'
+import axios from '@/axios'
 export default {
   data() {
     return {
@@ -56,20 +56,11 @@ export default {
       this.loading = true
       axios.post('/javaSever/selectAnswers', { question: this.searchStr, index: this.pageIndex }).then(res => {
         if (res.data.code != 200) {
-          if (res.data.message == '身份验证失败') {
             this.loading = false
             this.$message({
               message: res.data.message,
               type: 'error'
             })
-            window.location.href = '/login'
-          } else {
-            this.loading = false
-            this.$message({
-              message: res.data.message,
-              type: 'error'
-            })
-          }
           return
         }
         this.answerList = res.data.data
@@ -79,7 +70,6 @@ export default {
           type: 'success'
         })
       }).catch(err => {
-          console.log(err)
           this.loading = false
           this.$message({
             message: '请求失败',

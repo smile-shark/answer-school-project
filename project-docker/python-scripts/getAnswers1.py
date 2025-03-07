@@ -37,6 +37,7 @@ def addAnswer(question):
     global db
     try:
         db = pymysql.connect(
+            port=MysqlConfig.port,
             host=MysqlConfig.host,
             password=MysqlConfig.password,
             user=MysqlConfig.user,

@@ -1,6 +1,5 @@
-import datetime
+
 import requests
-import time
 import json
 import pymysql
 import sys
@@ -33,6 +32,7 @@ def answerQuestions2(SbusectionID_now, qustionlst,answer_headers):
     for answertiems in qustionlst:
         # 链接到数据中查找答案
         db = pymysql.connect(
+            port=MysqlConfig.port,
             host=MysqlConfig.host,
             password=MysqlConfig.password,
             user=MysqlConfig.user,

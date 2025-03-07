@@ -1,8 +1,6 @@
 
 import requests
-import time
 import json
-import pymysql
 import sys
 import os
 import result.PythonResult as PythonResult

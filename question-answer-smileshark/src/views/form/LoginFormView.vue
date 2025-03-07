@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import axios from '../../axios.js'
+import axios from '@/axios'
 /* eslint-disable */
 export default {
   data() {

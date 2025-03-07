@@ -27,4 +27,6 @@ public class PythonPath {
     public String PYTHON_SCRIPTS_PATH_ANSWER_QUESTION_BY_SECTION;
     @Value("${GET_NEW_ANSWERS}")
     public String PYTHON_SCRIPTS_PATH_GET_NEW_ANSWERS;
+    @Value("${SH_CODE}")
+    public String PYTHON_INSTRUCTION_SH_CODE;
 }

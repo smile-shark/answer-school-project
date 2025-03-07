@@ -7,6 +7,7 @@ if __name__ == '__main__':
     try:
         print('数据库连接中...')
         db = pymysql.connect(
+            port=MysqlConfig.port,
             host=MysqlConfig.host,
             password=MysqlConfig.password,
             user=MysqlConfig.user,

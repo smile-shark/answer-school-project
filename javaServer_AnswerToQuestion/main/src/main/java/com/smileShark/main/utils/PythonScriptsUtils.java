@@ -1,20 +1,25 @@
 package com.smileShark.main.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import com.smileShark.main.code.PythonPath;
 import com.smileShark.main.common.PythonResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+@Component
 public class PythonScriptsUtils {
-    public static PythonResult usePythonScript(String scriptPath, String... params) throws IOException, InterruptedException {
+    @Autowired
+    private PythonPath pythonPath;
+    public PythonResult usePythonScript(String scriptPath, String... params) throws IOException, InterruptedException {
         for (String param : params) {
             System.out.println("参数："+param);
         }
 
         // 调用python脚本
-        Process process = Runtime.getRuntime().exec(String.format("python3 %s %s", scriptPath, String.join(" ", params)));
+        Process process = Runtime.getRuntime().exec(String.format("%s %s %s",pythonPath.PYTHON_INSTRUCTION_SH_CODE, scriptPath, String.join(" ", params)));
         // 获取python输出
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         StringBuilder json = new StringBuilder();

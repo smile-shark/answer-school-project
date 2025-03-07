@@ -50,7 +50,7 @@
 
 <script>
 /* eslint-disable */
-import axios from '../../../axios.js'
+import axios from '@/axios'
 let setIntervalContiner = null;
 export default {
     data() {
@@ -99,21 +99,11 @@ export default {
             this.subsectionList = []
             axios.post('/javaSever/selectChapter', { courseId: this.form.selectCourseName }).then(res => {
                 if (res.data.code != 200) {
-                    if (res.data.message == '身份验证失败') {
-                        localStorage.removeItem('token')
                         this.loading = false
                         this.$message({
                             message: res.data.message,
                             type: 'error'
                         })
-                        window.location.href = '/login'
-                    } else {
-                        this.loading = false
-                        this.$message({
-                            message: res.data.message,
-                            type: 'error'
-                        })
-                    }
                     return
                 }
                 this.chapterList = res.data.data
@@ -126,21 +116,11 @@ export default {
             this.subsectionList = []
             axios.post('/javaSever/selectSubsection', { chapterId: this.form.selectChapterName }).then(res => {
                 if (res.data.code != 200) {
-                    if (res.data.message == '身份验证失败') {
-                        localStorage.removeItem('token')
                         this.loading = false
                         this.$message({
                             message: res.data.message,
                             type: 'error'
                         })
-                        window.location.href = '/login'
-                    } else {
-                        this.loading = false
-                        this.$message({
-                            message: res.data.message,
-                            type: 'error'
-                        })
-                    }
                     return
                 }
                 this.subsectionList = res.data.data
@@ -219,21 +199,11 @@ export default {
             }
             axios.post('/javaSever/finishState', { subsectionId: this.subsectionIdList[this.index] }).then(res => {
                 if (res.data.code != 200) {
-                    if (res.data.message == '身份验证失败') {
-                        localStorage.removeItem('token')
                         this.loading = false
                         this.$message({
                             message: res.data.message,
                             type: 'error'
                         })
-                        window.location.href = '/login'
-                    } else {
-                        this.loading = false
-                        this.$message({
-                            message: res.data.message,
-                            type: 'error'
-                        })
-                    }
                     return
                 }
                 this.FinishCount += res.data.data.finishCount
@@ -268,25 +238,16 @@ export default {
     mounted() {
         axios.post('/javaSever/selectCourse', {}).then(res => {
             if (res.data.code != 200) {
-                if (res.data.message == '身份验证失败') {
-                    localStorage.removeItem('token')
                     this.loading = false
                     this.$message({
                         message: res.data.message,
                         type: 'error'
                     })
-                    window.location.href = '/login'
-                } else {
-                    this.loading = false
-                    this.$message({
-                        message: res.data.message,
-                        type: 'error'
-                    })
-                }
                 return
             }
             this.courseList = res.data.data
         }).catch(err => {
+            console.log(err)
             this.$message.error('请求失败，请检查网络连接')
         })
     }
