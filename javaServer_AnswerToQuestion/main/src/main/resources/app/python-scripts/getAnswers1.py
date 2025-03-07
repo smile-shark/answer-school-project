@@ -47,11 +47,10 @@ def addAnswer(question):
             answerStr += f"{question['answer'][index]['answer_id']}LBT_1534_LX_5212_WZL_4818{question['answer'][index]['answer_content']}LBT_1534_LX_5212_WZL_4818"
 
         # 去除最后一个LBT_1534_LX_5212_WZL_4818
-        answerStr = answerStr[:-24]
+        answerStr = answerStr[:-25]
         # 创建一个游标对象
         cursor = db.cursor()
-        allStr = f"""insert into question_and_answer (question_id, question, answers) 
-            values('{question['questionID'].replace("'", "\\'")}','{question['questionTitle'].replace("'", "\\'")}','{answerStr}');"""
+        allStr = "insert into question_and_answer (question_id, question, answers) values('"+question['questionID'].replace("'", "\\'")+"','"+question['questionTitle'].replace("'", "\\'")+"','"+answerStr+"');"
         db.ping(reconnect=True)
         cursor.execute(allStr)
         db.commit()

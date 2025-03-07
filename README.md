@@ -1,9 +1,33 @@
 # 服务学校账号的项目
 重庆足下软件学院
 
-### **包括：**
+## 使用Docker部署
+
+1. 进入`project-docker` 目录
+
+   ![目录](./images/Snipaste_2025-03-07_09-00-37.png)
+
+2. 使用`docker-compose`（旧版）或`docker compose `（新版）
+
+   `docker compose up -d `
+
+3. Mysql 数据库需求：
+
+   * 远程访问用户：`smileshark`
+   * 远程访问密码：`smileshark123456`
+   * 远程访问数据库：`school_question_data`
+
+   sql文件有概率无法读取，可能需要手动执行：
+
+   ```bash
+   # 进入容器的数据库后使用init.sql文件
+   > source /docker-entrypoint-initdb.d/init.sql
+   ```
+
+### **目前包括：**
 
 * 自动评估
+* 题目搜索
 
 ### **待开发：**
 

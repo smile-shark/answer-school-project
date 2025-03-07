@@ -9,6 +9,10 @@ import java.io.InputStreamReader;
 
 public class PythonScriptsUtils {
     public static PythonResult usePythonScript(String scriptPath, String... params) throws IOException, InterruptedException {
+        for (String param : params) {
+            System.out.println("参数："+param);
+        }
+
         // 调用python脚本
         Process process = Runtime.getRuntime().exec(String.format("python3 %s %s", scriptPath, String.join(" ", params)));
         // 获取python输出

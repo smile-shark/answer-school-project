@@ -93,8 +93,7 @@ public class UserServiceImp implements UserService {
                                                     try {
                                                         int i = subsectionMapper.insertSubsection(subsection);
                                                         System.out.println("小结添加：" + i);
-                                                    } catch (Exception e) {
-                                                        System.out.println(e.getMessage());
+                                                    } catch (Exception _) {;
                                                     }
                                                 });
                                             });
@@ -103,8 +102,7 @@ public class UserServiceImp implements UserService {
                                             int i = chapterMapper.addChapter(chapter);
                                             System.out.println("章节添加：" + i);
 
-                                        } catch (Exception e) {
-                                            System.out.println(e.getMessage());
+                                        } catch (Exception _) {
                                         }
 
                                     });

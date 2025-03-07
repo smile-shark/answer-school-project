@@ -72,7 +72,7 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
             );
 
         } catch (Exception e) {
-            log.error(e.getMessage());
+            e.printStackTrace();
         }
         return JSONObject.toJSONString(result);
     }
@@ -88,7 +88,7 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
             if (request.getSelectSubsectionName() != null && !request.getSelectSubsectionName().isEmpty()) {
                 pythonResult = pythonScript.getQuestionBySubsectionId(user, request.getSelectSubsectionName());
             } else if (request.getSelectChapterName() != null && !request.getSelectChapterName().isEmpty()) {
-                pythonResult = pythonScript.getQuestionByChapterId(user, request.getSelectChapterName());
+                pythonResult = pythonScript.getQuestionByChapterId(user,request.getSelectCourseName(),request.getSelectChapterName());
             } else if (request.getSelectCourseName() != null && !request.getSelectCourseName().isEmpty()) {
                 pythonResult = pythonScript.getQuestionByCourseId(user, request.getSelectCourseName());
             }else{

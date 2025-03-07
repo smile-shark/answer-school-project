@@ -26,16 +26,6 @@
 
 <script>
 import axios from '../../axios.js'
-// window.onload = function () {
-//   if (localStorage.getItem('token') && localStorage.getItem('token').length > 7) {
-//     axios.post('/javaSever/loginIn').then(res => {
-//       console.log(res.data)
-//       if (res.data) {
-//         location.assign('/#/main')
-//       }
-//     })
-//   }
-// }
 /* eslint-disable */
 export default {
   data() {

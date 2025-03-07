@@ -11,4 +11,6 @@ import java.util.List;
 @Repository
 public interface QuestionAndAnswerMapper {
     List<QuestionAndAnswer> selectQuestionAndAnswerByQuestion(@Param("question")String question);
+    List<QuestionAndAnswer> selectAllQuestionAndAnswer();
+    int deleteQuestionAndAnswerByQuestionId(@Param("questionId")String questionId);
 }

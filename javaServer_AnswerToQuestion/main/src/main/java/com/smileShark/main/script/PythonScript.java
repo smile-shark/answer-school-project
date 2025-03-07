@@ -39,10 +39,11 @@ public class PythonScript {
         );
     }
     // 根据章节获取需要回答的题目数量
-    public PythonResult getQuestionByChapterId(User user,String chapterId) throws IOException, InterruptedException {
+    public PythonResult getQuestionByChapterId(User user,String courseId,String chapterId) throws IOException, InterruptedException {
         return PythonScriptsUtils.usePythonScript(
                 pythonPath.PYTHON_SCRIPTS_PATH_GET_COUNT_USE_CHAPTER,
                 user.getUserId(),user.getUserPassword(),
+                courseId,
                 chapterId
         );
     }

@@ -11,4 +11,10 @@
             </if>
         </where>
     </select>
+    <select id="selectAllQuestionAndAnswer" resultType="questionAndAnswer">
+        select * from question_and_answer
+    </select>
+    <delete id="deleteQuestionAndAnswerByQuestionId">
+        delete from question_and_answer where question_id = #{questionId}
+    </delete>
 </mapper>

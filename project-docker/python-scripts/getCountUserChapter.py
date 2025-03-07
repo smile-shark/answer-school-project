@@ -74,8 +74,8 @@ def get_SubID():
                 question.append(questioned['id'])
                 PythonResult.result['questionCount'] += 1
 
-        except:
-            PythonResult.getResultFalseLogin()
+        except Exception as e:
+            pass
         questioning.close()
     PythonResult.result['subsectionTdList'] = SubsectionID
     print(json.dumps(PythonResult.result))
@@ -103,7 +103,6 @@ except:
     PythonResult.getResultFalseLogin()
     sys.exit(1)
 
-# print(token)#确定登陆成功
 
 # 设置验证的头部
 answer_headers = {
