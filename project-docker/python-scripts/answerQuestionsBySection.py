@@ -184,7 +184,7 @@ def get_SubID(userList):
             qustionlst.append(questionItme['id'])
         answerQuestions2(qu, qustionlst,answer_headers)
     except Exception as error:
-        PythonResult.getResultFalseLogin()
+        pass
     questionreq.close()
 
 

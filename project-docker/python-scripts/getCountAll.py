@@ -51,9 +51,9 @@ def get_SubID(courseId):
                     elif Sub['testMemberInfo']['times']<limitation and not Sub['testMemberInfo']['isPass']:
                         SubsectionID.append(Sub['id'])
             except:
-                PythonResult.getResultFalseLogin()
-    except Exception as error:
-        PythonResult.getResultFalseLogin()
+                pass
+    except:
+        pass
     reqSubsection.close()
 
     for qu in SubsectionID:
@@ -71,7 +71,7 @@ def get_SubID(courseId):
                 PythonResult.result['questionCount'] += 1
 
         except :
-            PythonResult.getResultFalseLogin()
+            pass
         questioning.close()
     PythonResult.result['subsectionTdList'] = SubsectionID
     print(json.dumps(PythonResult.result))

@@ -54,10 +54,10 @@ def get_SubID():
                         elif Sub['testMemberInfo']['times'] < limitation and not Sub['testMemberInfo']['isPass']:
                             SubsectionID.append(Sub['id'])
                 except:
-                    PythonResult.getResultFalseLogin()
+                    pass
                 break
     except:
-        PythonResult.getResultFalseLogin()
+       pass
     reqSubsection.close()
 
     for qu in SubsectionID:
