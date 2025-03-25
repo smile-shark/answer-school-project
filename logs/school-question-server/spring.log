@@ -1,0 +1,18 @@
+2025-03-10 11:18:08.127  INFO 14000 --- [school-question-server] [main] com.smileShark.MainApplication           : Starting MainApplication using Java 22.0.2 with PID 14000 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\shark-tool-server\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-10 11:18:08.128 DEBUG 14000 --- [school-question-server] [main] com.smileShark.MainApplication           : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-03-10 11:18:08.128  INFO 14000 --- [school-question-server] [main] com.smileShark.MainApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 11:18:08.776  INFO 14000 --- [school-question-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-10 11:18:08.779  INFO 14000 --- [school-question-server] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-10 11:18:08.779  INFO 14000 --- [school-question-server] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-10 11:18:08.790  INFO 14000 --- [school-question-server] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-10 11:18:08.799  INFO 14000 --- [school-question-server] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 11:18:08.799  INFO 14000 --- [school-question-server] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-03-10 11:18:08.828  INFO 14000 --- [school-question-server] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 11:18:08.828  INFO 14000 --- [school-question-server] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 669 ms
+2025-03-10 11:18:09.178  INFO 14000 --- [school-question-server] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 11:18:09.182  INFO 14000 --- [school-question-server] [main] com.smileShark.MainApplication           : Started MainApplication in 1.333 seconds (process running for 1.699)
+2025-03-10 11:18:18.586  INFO 14000 --- [school-question-server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 11:18:18.586  INFO 14000 --- [school-question-server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 11:18:18.587  INFO 14000 --- [school-question-server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-10 11:18:18.647  INFO 14000 --- [school-question-server] [http-nio-8080-exec-1] c.smileShark.service.imp.UserServiceImp  : 用户：320123199008210001 登录，IP地址：0:0:0:0:0:0:0:1
+2025-03-10 11:18:19.965  INFO 14000 --- [school-question-server] [http-nio-8080-exec-1] c.smileShark.service.imp.UserServiceImp  : 用户：320123199008210001 登录成功

@@ -32,38 +32,38 @@ public class ServerFilter implements Filter {
         String url = req.getRequestURL().toString();
 
         log.info("请求的url：{}", url);
-        if (url.contains("login") && !url.contains("loginIn")) {
-            log.info("登陆操作，放行...");
-            filterChain.doFilter(servletRequest, servletResponse);
-            return;
-        }
-        String jwt = req.getHeader("token");
-
-        if (!StringUtils.hasLength(jwt)) {
-            log.info("token为空，拦截请求...");
-            resp.getWriter().write(JSONObject.toJSONString(new Result(){{
-                setCode(401);
-                setMessage("请先登录");
-            }}));
-            resp.getWriter().flush(); // 刷新缓冲区
-            resp.getWriter().close(); // 关闭流
-            return;
-        }
-
-        // 解析token，判断是否合法
-        try {
-            JwtUtils.parseJWT(jwt, User.class);
-        } catch (Exception e) {
-            log.info("token解析失败，拦截请求...");
-            resp.getWriter().write(JSONObject.toJSONString(new Result() {{
-                setCode(401);
-                setMessage("身份验证失败");
-            }}));
-            resp.getWriter().flush(); // 刷新缓冲区
-            resp.getWriter().close(); // 关闭流
-            return;
-        }
-        log.info("令牌合法，放行");
+//        if (url.contains("login") && !url.contains("loginIn")) {
+//            log.info("登陆操作，放行...");
+//            filterChain.doFilter(servletRequest, servletResponse);
+//            return;
+//        }
+//        String jwt = req.getHeader("token");
+//
+//        if (!StringUtils.hasLength(jwt)) {
+//            log.info("token为空，拦截请求...");
+//            resp.getWriter().write(JSONObject.toJSONString(new Result(){{
+//                setCode(401);
+//                setMessage("请先登录");
+//            }}));
+//            resp.getWriter().flush(); // 刷新缓冲区
+//            resp.getWriter().close(); // 关闭流
+//            return;
+//        }
+//
+//        // 解析token，判断是否合法
+//        try {
+//            JwtUtils.parseJWT(jwt, User.class);
+//        } catch (Exception e) {
+//            log.info("token解析失败，拦截请求...");
+//            resp.getWriter().write(JSONObject.toJSONString(new Result() {{
+//                setCode(401);
+//                setMessage("身份验证失败");
+//            }}));
+//            resp.getWriter().flush(); // 刷新缓冲区
+//            resp.getWriter().close(); // 关闭流
+//            return;
+//        }
+//        log.info("令牌合法，放行");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }

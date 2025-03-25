@@ -1,0 +1,196 @@
+2025-03-24 08:44:51.786  INFO 26496 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-24 08:44:51.795  INFO 26496 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-24 08:44:51.795  INFO 26496 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-24 08:44:51.801  INFO 26496 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-24 08:44:51.939  INFO 26496 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 26496 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-24 08:44:51.939 DEBUG 26496 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-24 08:44:51.940  INFO 26496 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-24 08:44:52.476  INFO 26496 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=87d41010-a99c-3974-89e2-e773c7226683
+2025-03-24 08:44:52.678  INFO 26496 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-24 08:44:52.681  INFO 26496 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-24 08:44:52.681  INFO 26496 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-24 08:44:52.685  INFO 26496 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-24 08:44:52.695  INFO 26496 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-24 08:44:52.695  INFO 26496 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-24 08:44:52.731  INFO 26496 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-24 08:44:52.732  INFO 26496 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 764 ms
+2025-03-24 08:44:53.206  INFO 26496 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-24 08:44:53.237  INFO 26496 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-24 08:44:53.237  INFO 26496 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-24 08:44:53.770  INFO 26496 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-24 08:44:53.771  INFO 26496 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-24 08:44:53.771  INFO 26496 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-24 08:44:53.772  INFO 26496 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-24 08:44:53.851  INFO 26496 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8081 register finished
+2025-03-24 08:44:53.859  INFO 26496 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 2.379 seconds (process running for 2.924)
+2025-03-24 08:44:57.871  INFO 8736 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-24 08:44:57.875  INFO 8736 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-24 08:44:57.875  INFO 8736 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-24 08:44:57.879  INFO 8736 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-24 08:44:58.003  INFO 8736 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 8736 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-24 08:44:58.003 DEBUG 8736 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-24 08:44:58.003  INFO 8736 --- [search-service] [main] c.smileShark.search.SearchApplication    : The following 1 profile is active: "local"
+2025-03-24 08:44:58.429  INFO 8736 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=87d41010-a99c-3974-89e2-e773c7226683
+2025-03-24 08:44:58.597  INFO 8736 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-03-24 08:44:58.599  INFO 8736 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-24 08:44:58.600  INFO 8736 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-24 08:44:58.602  INFO 8736 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-24 08:44:58.609  INFO 8736 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-24 08:44:58.609  INFO 8736 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-24 08:44:58.636  INFO 8736 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-24 08:44:58.636  INFO 8736 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 605 ms
+2025-03-24 08:44:59.036  INFO 8736 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-03-24 08:44:59.071  INFO 8736 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-24 08:44:59.071  INFO 8736 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-24 08:44:59.488  INFO 8736 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-24 08:44:59.489  INFO 8736 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-24 08:44:59.490  INFO 8736 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-24 08:44:59.490  INFO 8736 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-24 08:44:59.520  INFO 8736 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8083 register finished
+2025-03-24 08:44:59.528  INFO 8736 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 1.919 seconds (process running for 2.296)
+2025-03-24 09:28:02.082  INFO 8736 --- [search-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-24 09:28:02.083  INFO 8736 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-24 09:28:02.085  INFO 8736 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-24 09:28:40.107  INFO 8736 --- [search-service] [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-24 09:28:40.238  INFO 8736 --- [search-service] [http-nio-8083-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1056b0bc
+2025-03-24 09:28:40.240  INFO 8736 --- [search-service] [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-24 09:28:40.245 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:28:40.262 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:28:40.374 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:28:40.378 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:28:40.379 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:28:40.385 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 09:30:26.535 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:30:26.536 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:30:26.549 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:30:26.550 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:30:26.550 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:30:26.552 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 09:30:27.307 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:30:27.308 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:30:27.321 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:30:27.322 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:30:27.322 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:30:27.325 DEBUG 8736 --- [search-service] [http-nio-8083-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 09:30:28.172  INFO 26496 --- [search-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-24 09:30:28.173  INFO 26496 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-24 09:30:28.175  INFO 26496 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-24 09:30:28.287  INFO 26496 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-24 09:30:28.388  INFO 26496 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2860099
+2025-03-24 09:30:28.389  INFO 26496 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-24 09:30:28.394 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:30:28.410 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:30:28.441 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:30:28.446 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:30:28.446 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:30:28.451 DEBUG 26496 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 09:30:29.158 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:30:29.158 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:30:29.172 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:30:29.173 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:30:29.173 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:30:29.174 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 09:30:30.656 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 09:30:30.657 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 09:30:30.671 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 09:30:30.671 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 09:30:30.671 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 09:30:30.673 DEBUG 8736 --- [search-service] [http-nio-8083-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 10:21:41.142 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 10:21:41.145 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 10:21:41.173 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 10:21:41.174 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 10:21:41.175 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 10:21:41.177 DEBUG 26496 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 10:21:42.233 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 10:21:42.235 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 10:21:42.254 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 10:21:42.255 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 10:21:42.256 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 10:21:42.258 DEBUG 8736 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 10:21:47.988 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 10:21:47.988 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 10:21:48.003 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 10:21:48.003 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 10:21:48.003 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 10:21:48.006 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 10:21:48.677 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 10:21:48.678 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 10:21:48.692 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 10:21:48.693 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 10:21:48.693 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 10:21:48.694 DEBUG 8736 --- [search-service] [http-nio-8083-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 10:46:56.015 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 10:46:56.015 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 10:46:56.030 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 10:46:56.032 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 10:46:56.032 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 10:46:56.035 DEBUG 26496 --- [search-service] [http-nio-8081-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 11:07:33.349 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 11:07:33.349 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 11:07:33.364 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 11:07:33.364 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 11:07:33.364 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 11:07:33.367 DEBUG 26496 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 11:07:45.322 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 11:07:45.323 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 11:07:45.337 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 11:07:45.338 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 11:07:45.338 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 11:07:45.339 DEBUG 8736 --- [search-service] [http-nio-8083-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 11:08:48.682 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 11:08:48.683 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 11:08:48.697 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 11:08:48.697 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 11:08:48.697 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 11:08:48.699 DEBUG 26496 --- [search-service] [http-nio-8081-exec-10] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 11:14:45.532 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 11:14:45.532 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 11:14:45.547 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 11:14:45.548 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 11:14:45.548 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 11:14:45.550 DEBUG 8736 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 11:22:35.415 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 11:22:35.416 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 11:22:35.430 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 11:22:35.431 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 11:22:35.431 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 11:22:35.433 DEBUG 26496 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 12:32:24.011 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 12:32:24.013 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 12:32:24.071 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 12:32:24.072 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 12:32:24.072 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 12:32:24.074 DEBUG 26496 --- [search-service] [http-nio-8081-exec-8] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 14:20:06.309  WARN 26496 --- [search-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m34s133ms548µs200ns).
+2025-03-24 14:20:18.170  WARN 8736 --- [search-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m34s128ms551µs400ns).
+2025-03-24 14:47:46.548 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-24 14:47:46.554 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %m%y%s%q%l%(String)
+2025-03-24 14:47:46.607 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-24 14:47:46.608 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-24 14:47:46.609 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %m%y%s%q%l%(String), 10(Integer)
+2025-03-24 14:47:46.614 DEBUG 8736 --- [search-service] [http-nio-8083-exec-6] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-24 15:28:09.981  WARN 8736 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-24 15:28:09.982  WARN 8736 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-24 15:28:09.981  WARN 8736 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-24 15:28:09.984  WARN 8736 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-24 15:28:09.981  WARN 26496 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-24 15:28:09.981  WARN 26496 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-24 15:28:09.981  WARN 26496 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-24 15:28:09.986  WARN 8736 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-24 15:28:09.986  WARN 26496 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-24 15:28:09.989  WARN 26496 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-24 15:28:09.992  WARN 8736 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-24 15:28:09.996  WARN 26496 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-24 15:28:10.039  INFO 8736 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-24 15:28:10.054  INFO 8736 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-24 15:28:10.068  INFO 26496 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-24 15:28:10.073  INFO 8736 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-24 15:28:10.095  INFO 8736 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-24 15:28:10.098  INFO 26496 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-24 15:28:10.113  INFO 8736 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-24 15:28:10.119  INFO 8736 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-24 15:28:10.133  INFO 26496 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-24 15:28:10.154  INFO 26496 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-24 15:28:10.175  INFO 26496 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-24 15:28:10.182  INFO 26496 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

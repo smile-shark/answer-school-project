@@ -19,6 +19,7 @@
         <module>shark-tool-server</module>
         <module>search-service</module>
         <module>answer-question-service</module>
+        <module>shark-tool-api</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -46,8 +47,15 @@
         <fastjson.version>1.2.78</fastjson.version>
         <jaxb.api.version>2.3.1</jaxb.api.version>
         <jaxb.runtime.version>2.3.1</jaxb.runtime.version>
+        <hu-tool.version>5.8.36</hu-tool.version><dependency>
+    </dependency>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hu-tool.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

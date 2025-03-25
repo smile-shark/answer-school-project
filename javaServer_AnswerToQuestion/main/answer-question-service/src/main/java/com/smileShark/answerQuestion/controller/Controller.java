@@ -1,18 +1,20 @@
 package com.smileShark.answerQuestion.controller;
 
 
+import cn.hutool.core.bean.BeanUtil;
 import com.smileShark.answerQuestion.common.Request;
 import com.smileShark.answerQuestion.service.ChapterService;
 import com.smileShark.answerQuestion.service.CourseService;
 import com.smileShark.answerQuestion.service.QuestionAndAnswerService;
 import com.smileShark.answerQuestion.service.SubsectionService;
+import com.smileShark.api.client.SearchClient;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.io.IOException;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,6 +23,9 @@ public class Controller {
     private final CourseService courseService;
     private final ChapterService chapterService;
     private final SubsectionService subsectionService;
+    private final RestTemplate restTemplate;
+    private final DiscoveryClient discoveryClient;
+    private final SearchClient searchClient;
 
     @RequestMapping("/selectCourse")
     public String selectCourse() {
@@ -60,5 +65,32 @@ public class Controller {
     public String finish(@RequestHeader("token") String jwt) {
         questionAndAnswerService.addQuestion(jwt);
         return "OK";
+    }
+    @RequestMapping("/search/test")
+    public String search(@RequestBody Request request) {
+        /**
+         * 1. 根据服务名称获取服务的实例列表
+         * 2. 手写负载均衡，从实例中挑选一个实例
+         * 3. 利用RestTemplate发送请求,得到响应结果
+         */
+        /*//1. 根据服务名称获取服务的实例列表
+        List<ServiceInstance> instances = discoveryClient.getInstances("search-service");
+        if(instances.isEmpty()){
+           return "No instances found";
+        }
+        //2. 手写负载均衡，从实例中挑选一个实例
+        ServiceInstance instance = instances.get(new Random().nextInt(instances.size()));
+        //3. 利用RestTemplate发送请求,得到响应结果
+        ResponseEntity<String> response = restTemplate.exchange(
+                instance.getUri() + "/selectAnswers",
+                HttpMethod.POST,
+                new HttpEntity<>(request),
+                String.class
+        );
+        System.out.println(response.getBody());
+        return response.getBody();*/
+        String s = searchClient.selectAnswers(BeanUtil.copyProperties(request, com.smileShark.api.dto.Request.class));
+        System.out.println(s);
+        return s;
     }
 }

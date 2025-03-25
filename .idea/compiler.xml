@@ -7,14 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="main" />
+        <module name="shark-tool-server" />
+        <module name="answer-question-service" />
+        <module name="search-service" />
+        <module name="shark-tool-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="school" target="1.5" />
+      <module name="shark-tool-utils" target="22" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="main" options="-parameters" />
+      <module name="answer-question-service" options="-parameters" />
+      <module name="main" options="" />
+      <module name="search-service" options="-parameters" />
+      <module name="shark-tool-api" options="-parameters" />
+      <module name="shark-tool-server" options="-parameters" />
+      <module name="shark-tool-utils" options="-parameters" />
     </option>
   </component>
 </project>
