@@ -11,15 +11,13 @@ import java.util.Map;
 
 public class JwtUtils {
     public static <T> T parseJWT(String jwt, Class<T> clazz) {
+        if(jwt==null){
+            return null;
+        }
         Claims claims= Jwts.parser()
                 .setSigningKey("www.tool.shark.com")
                 .parseClaimsJws(jwt)
                 .getBody();
-
-//        User user=new User();
-//        user.setUserId(claims.get("userId").toString());
-//        user.setUserPassword(claims.get("password").toString());
-//        user.setUserName(claims.get("userName").toString());
         System.out.println("操作用户用户："+claims.get("userName").toString());
         return clazz.cast(claims.getSubject());
     }

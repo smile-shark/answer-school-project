@@ -2,8 +2,6 @@ package com.smileShark.answerQuestion.service.imp;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import com.smileShark.answerQuestion.common.PythonResult;
 import com.smileShark.answerQuestion.common.Request;
 import com.smileShark.answerQuestion.common.ResponseData;

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/search")
 public class QuestionAndAnswerController {
     private final QuestionAndAnswerService questionAndAnswerService;
 

@@ -8,6 +8,7 @@
       <option name="customHeaders">
         <set>
           <option value="token" />
+          <option value="user-info" />
         </set>
       </option>
     </inspection_tool>

@@ -9,7 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@ServletComponentScan(basePackages = "com.smileShark.answerQuestion.filter")
 @MapperScan("com.smileShark.answerQuestion.mapper")
 @SpringBootApplication
 @EnableFeignClients(basePackages = "com.smileShark.api.client",defaultConfiguration = DefaultFeignConfig.class) // <-- 启用 Feign Clients

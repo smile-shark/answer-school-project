@@ -2,7 +2,9 @@ package com.smileShark.answerQuestion.controller;
 
 
 import cn.hutool.core.bean.BeanUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.smileShark.answerQuestion.common.Request;
+import com.smileShark.answerQuestion.entity.User;
 import com.smileShark.answerQuestion.service.ChapterService;
 import com.smileShark.answerQuestion.service.CourseService;
 import com.smileShark.answerQuestion.service.QuestionAndAnswerService;
@@ -16,8 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/answerQuestion")
 public class Controller {
     private final QuestionAndAnswerService questionAndAnswerService;
     private final CourseService courseService;
@@ -67,7 +73,12 @@ public class Controller {
         return "OK";
     }
     @RequestMapping("/search/test")
-    public String search(@RequestBody Request request) {
+    public String search(@RequestBody Request request,
+                         @RequestHeader(value = "user-info",
+                         required = false)String user) {
+        String decodedUserJson = URLDecoder.decode(user, StandardCharsets.UTF_8); // 解码
+        System.out.println(decodedUserJson);
+        System.out.println(JSONObject.parse(decodedUserJson));
         /**
          * 1. 根据服务名称获取服务的实例列表
          * 2. 手写负载均衡，从实例中挑选一个实例

@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient("search-service")
 public interface SearchClient {
-    @PostMapping("/selectAnswers")
+    @PostMapping("/search/selectAnswers")
     String selectAnswers(@RequestBody Request request);
 }
