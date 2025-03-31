@@ -1,269 +1,174 @@
-2025-03-27 08:23:57.506  INFO 3292 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
-2025-03-27 08:23:57.515  INFO 3292 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
-2025-03-27 08:23:57.516  INFO 3292 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
-2025-03-27 08:23:57.520  INFO 3292 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
-2025-03-27 08:23:57.657  INFO 3292 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 3292 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
-2025-03-27 08:23:57.657 DEBUG 3292 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-03-27 08:23:57.658  INFO 3292 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-03-27 08:23:58.346  INFO 3292 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6bb178f7-eb9a-39dc-9a76-91081943dff1
-2025-03-27 08:23:58.576  INFO 3292 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-03-27 08:23:58.579  INFO 3292 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-03-27 08:23:58.579  INFO 3292 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-03-27 08:23:58.584  INFO 3292 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-03-27 08:23:58.595  INFO 3292 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-03-27 08:23:58.595  INFO 3292 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-03-27 08:23:58.634  INFO 3292 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-03-27 08:23:58.634  INFO 3292 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 945 ms
-2025-03-27 08:23:58.902  INFO 1352 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
-2025-03-27 08:23:58.907  INFO 1352 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
-2025-03-27 08:23:58.907  INFO 1352 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
-2025-03-27 08:23:58.912  INFO 1352 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
-2025-03-27 08:23:59.045  INFO 1352 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 1352 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
-2025-03-27 08:23:59.045 DEBUG 1352 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-03-27 08:23:59.045  INFO 1352 --- [search-service] [main] c.smileShark.search.SearchApplication    : The following 1 profile is active: "local"
-2025-03-27 08:23:59.181  INFO 3292 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-03-27 08:23:59.219  INFO 3292 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-03-27 08:23:59.219  INFO 3292 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-03-27 08:23:59.583  INFO 1352 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6bb178f7-eb9a-39dc-9a76-91081943dff1
-2025-03-27 08:23:59.706  INFO 3292 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
-2025-03-27 08:23:59.707  INFO 3292 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
-2025-03-27 08:23:59.707  INFO 3292 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
-2025-03-27 08:23:59.707  INFO 3292 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
-2025-03-27 08:23:59.737  INFO 3292 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8081 register finished
-2025-03-27 08:23:59.744  INFO 3292 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 2.526 seconds (process running for 2.958)
-2025-03-27 08:23:59.778  INFO 1352 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
-2025-03-27 08:23:59.780  INFO 1352 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-03-27 08:23:59.780  INFO 1352 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-03-27 08:23:59.782  INFO 1352 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-03-27 08:23:59.790  INFO 1352 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-03-27 08:23:59.791  INFO 1352 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-03-27 08:23:59.824  INFO 1352 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-03-27 08:23:59.824  INFO 1352 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 753 ms
-2025-03-27 08:24:00.221  INFO 1352 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
-2025-03-27 08:24:00.266  INFO 1352 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-03-27 08:24:00.266  INFO 1352 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-03-27 08:24:00.704  INFO 1352 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
-2025-03-27 08:24:00.705  INFO 1352 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
-2025-03-27 08:24:00.706  INFO 1352 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
-2025-03-27 08:24:00.706  INFO 1352 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
-2025-03-27 08:24:00.734  INFO 1352 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8083 register finished
-2025-03-27 08:24:00.742  INFO 1352 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 2.131 seconds (process running for 2.565)
-2025-03-27 08:49:42.016  INFO 3292 --- [search-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-03-27 08:49:42.016  INFO 3292 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-03-27 08:49:42.016  INFO 3292 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-03-27 08:49:42.231  INFO 3292 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-27 08:49:42.437  INFO 3292 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@487e92e2
-2025-03-27 08:49:42.437  INFO 3292 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-27 08:49:42.446 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 08:49:42.470 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 08:49:42.605 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 08:49:42.609 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 08:49:42.609 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 08:49:42.614 DEBUG 3292 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 14:38:47.929  INFO 1352 --- [search-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-03-27 14:38:47.936  INFO 1352 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-03-27 14:38:47.958  INFO 1352 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
-2025-03-27 14:38:48.144  INFO 1352 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-27 14:38:48.280  INFO 1352 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b1005a9
-2025-03-27 14:38:48.282  INFO 1352 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-27 14:38:48.290 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 14:38:48.311 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 14:38:48.380 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 14:38:48.386 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 14:38:48.387 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 14:38:48.393 DEBUG 1352 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 14:53:29.794 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 14:53:29.802 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 14:53:29.820 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 14:53:29.821 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 14:53:29.822 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 14:53:29.825 DEBUG 3292 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 14:53:35.312 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 14:53:35.312 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 14:53:35.325 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 14:53:35.326 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 14:53:35.326 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 14:53:35.328 DEBUG 1352 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 14:53:53.713 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 14:53:53.713 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 14:53:53.728 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 14:53:53.728 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 14:53:53.728 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 14:53:53.730 DEBUG 3292 --- [search-service] [http-nio-8081-exec-4] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 14:54:49.802 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 14:54:49.802 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 14:54:49.816 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 14:54:49.817 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 14:54:49.817 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 14:54:49.818 DEBUG 1352 --- [search-service] [http-nio-8083-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 15:28:25.942 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 15:28:25.943 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 15:28:25.957 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 15:28:25.957 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 15:28:25.958 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 15:28:25.959 DEBUG 1352 --- [search-service] [http-nio-8083-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 15:33:44.485 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 15:33:44.487 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 15:33:44.502 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 15:33:44.502 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 15:33:44.502 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 15:33:44.504 DEBUG 3292 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 15:54:21.290  WARN 1352 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-03-27 15:54:21.290  WARN 1352 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-03-27 15:54:21.291  WARN 1352 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-03-27 15:54:21.291  WARN 1352 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-03-27 15:54:21.292  WARN 1352 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-03-27 15:54:21.295  WARN 1352 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-03-27 15:54:21.295  WARN 3292 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-03-27 15:54:21.295  WARN 3292 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-03-27 15:54:21.296  WARN 3292 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-03-27 15:54:21.298  WARN 3292 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-03-27 15:54:21.298  WARN 3292 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-03-27 15:54:21.300  WARN 3292 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-03-27 15:54:21.313  INFO 1352 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-03-27 15:54:21.324  INFO 1352 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-03-27 15:54:21.336  INFO 3292 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-03-27 15:54:21.336  INFO 1352 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-03-27 15:54:21.349  INFO 3292 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-03-27 15:54:21.356  INFO 1352 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2025-03-27 15:54:21.365  INFO 3292 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-03-27 15:54:21.371  INFO 1352 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-27 15:54:21.381  INFO 1352 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-03-27 15:54:21.395  INFO 3292 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2025-03-27 15:54:21.411  INFO 3292 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-27 15:54:21.418  INFO 3292 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-03-27 15:54:22.945  INFO 28348 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
-2025-03-27 15:54:22.951  INFO 28348 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
-2025-03-27 15:54:22.951  INFO 28348 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
-2025-03-27 15:54:22.959  INFO 28348 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
-2025-03-27 15:54:23.084  INFO 28348 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 28348 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
-2025-03-27 15:54:23.085 DEBUG 28348 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-03-27 15:54:23.086  INFO 28348 --- [search-service] [main] c.smileShark.search.SearchApplication    : The following 1 profile is active: "local"
-2025-03-27 15:54:23.640  INFO 28348 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6bb178f7-eb9a-39dc-9a76-91081943dff1
-2025-03-27 15:54:23.845  INFO 28348 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
-2025-03-27 15:54:23.848  INFO 28348 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-03-27 15:54:23.848  INFO 28348 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-03-27 15:54:23.851  INFO 28348 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-03-27 15:54:23.860  INFO 28348 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-03-27 15:54:23.861  INFO 28348 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-03-27 15:54:23.894  INFO 28348 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-03-27 15:54:23.895  INFO 28348 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 780 ms
-2025-03-27 15:54:24.112  INFO 27852 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
-2025-03-27 15:54:24.117  INFO 27852 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
-2025-03-27 15:54:24.117  INFO 27852 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
-2025-03-27 15:54:24.121  INFO 27852 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
-2025-03-27 15:54:24.238  INFO 27852 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 27852 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
-2025-03-27 15:54:24.238 DEBUG 27852 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-03-27 15:54:24.240  INFO 27852 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-03-27 15:54:24.384  INFO 28348 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
-2025-03-27 15:54:24.421  INFO 28348 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-03-27 15:54:24.421  INFO 28348 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-03-27 15:54:24.822  INFO 27852 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6bb178f7-eb9a-39dc-9a76-91081943dff1
-2025-03-27 15:54:24.930  INFO 28348 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
-2025-03-27 15:54:24.931  INFO 28348 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
-2025-03-27 15:54:24.931  INFO 28348 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
-2025-03-27 15:54:24.933  INFO 28348 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
-2025-03-27 15:54:24.963  INFO 28348 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8083 register finished
-2025-03-27 15:54:24.972  INFO 28348 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 2.261 seconds (process running for 2.634)
-2025-03-27 15:54:25.031  INFO 27852 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-03-27 15:54:25.035  INFO 27852 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-03-27 15:54:25.035  INFO 27852 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-03-27 15:54:25.037  INFO 27852 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-03-27 15:54:25.045  INFO 27852 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-03-27 15:54:25.045  INFO 27852 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-03-27 15:54:25.082  INFO 27852 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-03-27 15:54:25.082  INFO 27852 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
-2025-03-27 15:54:25.556  INFO 27852 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-03-27 15:54:25.585  INFO 27852 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-03-27 15:54:25.585  INFO 27852 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-03-27 15:54:26.013  INFO 27852 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
-2025-03-27 15:54:26.014  INFO 27852 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
-2025-03-27 15:54:26.014  INFO 27852 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
-2025-03-27 15:54:26.015  INFO 27852 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
-2025-03-27 15:54:26.042  INFO 27852 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8081 register finished
-2025-03-27 15:54:26.050  INFO 27852 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 2.193 seconds (process running for 2.563)
-2025-03-27 16:00:42.017  INFO 27852 --- [search-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-03-27 16:00:42.017  INFO 27852 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-03-27 16:00:42.018  INFO 27852 --- [search-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-03-27 16:00:42.114  INFO 27852 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-27 16:00:42.209  INFO 27852 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2090c54e
-2025-03-27 16:00:42.210  INFO 27852 --- [search-service] [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-27 16:00:42.214 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:00:42.228 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:00:42.257 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:00:42.260 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:00:42.261 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:00:42.264 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:01:31.230  INFO 28348 --- [search-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-03-27 16:01:31.230  INFO 28348 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-03-27 16:01:31.231  INFO 28348 --- [search-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-03-27 16:01:31.328  INFO 28348 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-27 16:01:31.419  INFO 28348 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58030047
-2025-03-27 16:01:31.420  INFO 28348 --- [search-service] [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-27 16:01:31.425 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:01:31.440 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:01:31.467 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:01:31.470 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:01:31.471 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:01:31.475 DEBUG 28348 --- [search-service] [http-nio-8083-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:07:33.370 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:07:33.371 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:07:33.384 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:07:33.384 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:07:33.384 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:07:33.386 DEBUG 28348 --- [search-service] [http-nio-8083-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:10:03.702  WARN 28348 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-03-27 16:10:03.702  WARN 28348 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-03-27 16:10:03.702  WARN 28348 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-03-27 16:10:03.703  WARN 28348 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-03-27 16:10:03.703  WARN 28348 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-03-27 16:10:03.703  WARN 28348 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-03-27 16:10:03.705  INFO 28348 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-03-27 16:10:03.709  INFO 28348 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-03-27 16:10:03.711  INFO 28348 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-03-27 16:10:03.716  INFO 28348 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2025-03-27 16:10:03.720  INFO 28348 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-27 16:10:03.725  INFO 28348 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-03-27 16:10:47.962 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:10:47.962 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:10:47.975 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:10:47.975 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:10:47.976 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:10:47.977 DEBUG 27852 --- [search-service] [http-nio-8081-exec-3] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:13:01.371 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:13:01.371 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:13:01.385 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:13:01.385 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:13:01.385 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:13:01.388 DEBUG 27852 --- [search-service] [http-nio-8081-exec-5] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:14:15.754 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:14:15.754 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:14:15.768 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:14:15.768 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:14:15.768 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:14:15.770 DEBUG 27852 --- [search-service] [http-nio-8081-exec-7] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:22:16.877 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:22:16.877 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:22:16.891 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:22:16.891 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:22:16.891 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:22:16.893 DEBUG 27852 --- [search-service] [http-nio-8081-exec-9] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 16:27:19.676 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
-2025-03-27 16:27:19.676 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
-2025-03-27 16:27:19.689 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
-2025-03-27 16:27:19.690 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
-2025-03-27 16:27:19.690 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
-2025-03-27 16:27:19.691 DEBUG 27852 --- [search-service] [http-nio-8081-exec-1] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
-2025-03-27 17:13:06.291  WARN 27852 --- [search-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m4s192ms16µs500ns).
-2025-03-27 17:13:26.148  WARN 27852 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-03-27 17:13:26.149  WARN 27852 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-03-27 17:13:26.149  WARN 27852 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-03-27 17:13:26.149  WARN 27852 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-03-27 17:13:26.149  WARN 27852 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-03-27 17:13:26.151  WARN 27852 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-03-27 17:13:26.159  INFO 27852 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-03-27 17:13:26.166  INFO 27852 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-03-27 17:13:26.176  INFO 27852 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-03-27 17:13:26.186  INFO 27852 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2025-03-27 17:13:26.195  INFO 27852 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-27 17:13:26.198  INFO 27852 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-31 08:25:28.521  INFO 27132 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-31 08:25:28.532  INFO 27132 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-31 08:25:28.533  INFO 27132 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-31 08:25:28.539  INFO 27132 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-31 08:25:28.674  INFO 27132 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 27132 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-31 08:25:28.675 DEBUG 27132 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-31 08:25:28.675  INFO 27132 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31 08:25:29.480  INFO 27132 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=17498ef9-c905-3637-89cf-55e62f3fea13
+2025-03-31 08:25:29.789  INFO 27132 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-31 08:25:29.793  INFO 27132 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-31 08:25:29.793  INFO 27132 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-31 08:25:29.796  INFO 27132 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-31 08:25:29.807  INFO 27132 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 08:25:29.807  INFO 27132 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31 08:25:29.867  INFO 27132 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31 08:25:29.868  INFO 27132 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1157 ms
+2025-03-31 08:25:30.563  WARN 27132 --- [search-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-03-31 08:25:30.632  INFO 27132 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-31 08:25:30.679  INFO 27132 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-31 08:25:30.679  INFO 27132 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-31 08:25:31.258  INFO 6648 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-31 08:25:31.262  INFO 6648 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-31 08:25:31.263  INFO 6648 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-31 08:25:31.267  INFO 6648 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-31 08:25:31.369  INFO 27132 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-31 08:25:31.369  INFO 27132 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-31 08:25:31.371  INFO 27132 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-31 08:25:31.371  INFO 27132 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-31 08:25:31.423  INFO 27132 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8081 register finished
+2025-03-31 08:25:31.428  INFO 6648 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 6648 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-31 08:25:31.429 DEBUG 6648 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-31 08:25:31.429  INFO 6648 --- [search-service] [main] c.smileShark.search.SearchApplication    : The following 1 profile is active: "local"
+2025-03-31 08:25:31.433  INFO 27132 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 3.22 seconds (process running for 3.787)
+2025-03-31 08:25:32.340  INFO 6648 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=17498ef9-c905-3637-89cf-55e62f3fea13
+2025-03-31 08:25:32.680  INFO 6648 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-03-31 08:25:32.681  INFO 6648 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-31 08:25:32.681  INFO 6648 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-31 08:25:32.681  INFO 6648 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-31 08:25:32.696  INFO 6648 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 08:25:32.696  INFO 6648 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31 08:25:32.744  INFO 6648 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31 08:25:32.744  INFO 6648 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1268 ms
+2025-03-31 08:25:33.330  WARN 6648 --- [search-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-03-31 08:25:33.386  INFO 6648 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-03-31 08:25:33.423  INFO 6648 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-31 08:25:33.423  INFO 6648 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-31 08:25:33.993  INFO 6648 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-31 08:25:33.993  INFO 6648 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-31 08:25:33.993  INFO 6648 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-31 08:25:33.993  INFO 6648 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-31 08:25:34.027  INFO 6648 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8083 register finished
+2025-03-31 08:25:34.036  INFO 6648 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 3.068 seconds (process running for 3.673)
+2025-03-31 09:14:28.997  WARN 27132 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-31 09:14:28.997  WARN 27132 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-31 09:14:28.997  WARN 27132 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-31 09:14:28.998  WARN 27132 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-31 09:14:28.998  WARN 27132 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-31 09:14:28.999  WARN 27132 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-31 09:14:29.002  INFO 27132 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 09:14:29.008  INFO 27132 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 09:14:29.013  INFO 27132 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-31 09:14:29.104  WARN 6648 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-31 09:14:29.104  WARN 6648 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-31 09:14:29.104  WARN 6648 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-31 09:14:29.105  WARN 6648 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-31 09:14:29.105  WARN 6648 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-31 09:14:29.105  WARN 6648 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-31 09:14:29.109  INFO 6648 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 09:14:29.117  INFO 6648 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 09:14:29.121  INFO 6648 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-31 09:14:29.217  INFO 6648 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-31 09:14:29.217  INFO 27132 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-31 09:15:29.759  INFO 2168 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-31 09:15:29.766  INFO 2168 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-31 09:15:29.768  INFO 2168 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-31 09:15:29.777  INFO 2168 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-31 09:15:29.981  INFO 2168 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 2168 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-31 09:15:29.982 DEBUG 2168 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-31 09:15:29.983  INFO 2168 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31 09:15:30.757  INFO 2168 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=17498ef9-c905-3637-89cf-55e62f3fea13
+2025-03-31 09:15:31.111  INFO 2168 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-31 09:15:31.114  INFO 2168 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-31 09:15:31.115  INFO 2168 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-31 09:15:31.118  INFO 2168 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-31 09:15:31.129  INFO 2168 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 09:15:31.131  INFO 2168 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31 09:15:31.173  INFO 2168 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31 09:15:31.173  INFO 2168 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1150 ms
+2025-03-31 09:15:31.853  WARN 2168 --- [search-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-03-31 09:15:31.928  INFO 2168 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-31 09:15:31.978  INFO 2168 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-31 09:15:31.979  INFO 2168 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-31 09:15:32.867  INFO 14328 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-31 09:15:32.874  INFO 14328 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-31 09:15:32.875  INFO 14328 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-31 09:15:32.879  INFO 2168 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-31 09:15:32.880  INFO 14328 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-31 09:15:32.881  INFO 2168 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-31 09:15:32.881  INFO 2168 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-31 09:15:32.882  INFO 2168 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-31 09:15:32.916  INFO 2168 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8081 register finished
+2025-03-31 09:15:32.926  INFO 2168 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 3.472 seconds (process running for 4.075)
+2025-03-31 09:15:33.042  INFO 14328 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 14328 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-31 09:15:33.043 DEBUG 14328 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-31 09:15:33.048  INFO 14328 --- [search-service] [main] c.smileShark.search.SearchApplication    : The following 1 profile is active: "local"
+2025-03-31 09:15:33.851  INFO 14328 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=17498ef9-c905-3637-89cf-55e62f3fea13
+2025-03-31 09:15:34.274  INFO 14328 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-03-31 09:15:34.277  INFO 14328 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-31 09:15:34.277  INFO 14328 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-31 09:15:34.281  INFO 14328 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-31 09:15:34.294  INFO 14328 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 09:15:34.295  INFO 14328 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31 09:15:34.352  INFO 14328 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31 09:15:34.352  INFO 14328 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1260 ms
+2025-03-31 09:15:34.959  WARN 14328 --- [search-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-03-31 09:15:35.018  INFO 14328 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-03-31 09:15:35.059  INFO 14328 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-03-31 09:15:35.059  INFO 14328 --- [search-service] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-03-31 09:15:35.697  INFO 14328 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2025-03-31 09:15:35.698  INFO 14328 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-03-31 09:15:35.699  INFO 14328 --- [search-service] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2025-03-31 09:15:35.699  INFO 14328 --- [search-service] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-03-31 09:15:35.735  INFO 14328 --- [search-service] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP search-service 192.168.24.196:8083 register finished
+2025-03-31 09:15:35.743  INFO 14328 --- [search-service] [main] c.smileShark.search.SearchApplication    : Started SearchApplication in 3.226 seconds (process running for 3.857)
+2025-03-31 09:47:20.458  INFO 2168 --- [search-service] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 09:47:20.459  INFO 2168 --- [search-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-31 09:47:20.460  INFO 2168 --- [search-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-31 09:47:20.600  INFO 2168 --- [search-service] [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-31 09:47:20.707  INFO 2168 --- [search-service] [http-nio-8081-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2350ab6d
+2025-03-31 09:47:20.708  INFO 2168 --- [search-service] [http-nio-8081-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-31 09:47:20.713 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==>  Preparing: SELECT count(0) FROM question_and_answer WHERE question LIKE ?
+2025-03-31 09:47:20.729 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : ==> Parameters: %S%p%r%i%n%g%(String)
+2025-03-31 09:47:20.834 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .selectQuestionAndAnswerByQuestion_COUNT : <==      Total: 1
+2025-03-31 09:47:20.838 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==>  Preparing: select * from question_and_answer WHERE question like ? LIMIT ?
+2025-03-31 09:47:20.838 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : ==> Parameters: %S%p%r%i%n%g%(String), 10(Integer)
+2025-03-31 09:47:20.844 DEBUG 2168 --- [search-service] [http-nio-8081-exec-2] .s.m.Q.selectQuestionAndAnswerByQuestion : <==      Total: 10
+2025-03-31 12:48:47.565  WARN 2168 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-31 12:48:47.565  WARN 2168 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-31 12:48:47.565  WARN 2168 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-31 12:48:47.570  WARN 2168 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-31 12:48:47.571  WARN 2168 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-31 12:48:47.571  WARN 2168 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-31 12:48:47.594  INFO 2168 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 12:48:47.606  INFO 2168 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 12:48:47.624  INFO 2168 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-31 12:48:47.643  INFO 2168 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-31 12:48:47.614  WARN 14328 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-03-31 12:48:47.614  WARN 14328 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-03-31 12:48:47.614  WARN 14328 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-03-31 12:48:47.651  WARN 14328 --- [search-service] [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-03-31 12:48:47.655  INFO 2168 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-31 12:48:47.656  WARN 14328 --- [search-service] [Thread-2] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-03-31 12:48:47.658  INFO 2168 --- [search-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-31 12:48:47.675  WARN 14328 --- [search-service] [Thread-18] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-03-31 12:48:47.808  INFO 14328 --- [search-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 12:48:47.863  INFO 14328 --- [search-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-31 12:48:47.916  INFO 14328 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-03-31 12:48:47.971  INFO 14328 --- [search-service] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-03-31 12:48:49.999  INFO 16992 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterBuilder
+2025-03-31 12:48:50.005  INFO 16992 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-03-31 12:48:50.005  INFO 16992 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-03-31 12:48:50.009  INFO 16992 --- [search-service] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-03-31 12:48:50.136  INFO 16992 --- [search-service] [main] c.smileShark.search.SearchApplication    : Starting SearchApplication using Java 22.0.2 with PID 16992 (C:\Users\Public\someProject\school\school\javaServer_AnswerToQuestion\main\search-service\target\classes started by SmileShark in C:\Users\Public\someProject\school\school)
+2025-03-31 12:48:50.136 DEBUG 16992 --- [search-service] [main] c.smileShark.search.SearchApplication    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-31 12:48:50.136  INFO 16992 --- [search-service] [main] c.smileShark.search.SearchApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-03-31 12:48:50.766  INFO 16992 --- [search-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=17498ef9-c905-3637-89cf-55e62f3fea13
+2025-03-31 12:48:51.068  INFO 16992 --- [search-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-31 12:48:51.071  INFO 16992 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-03-31 12:48:51.071  INFO 16992 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-03-31 12:48:51.073  INFO 16992 --- [search-service] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-03-31 12:48:51.086  INFO 16992 --- [search-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-31 12:48:51.088  INFO 16992 --- [search-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-31 12:48:51.127  INFO 16992 --- [search-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-31 12:48:51.127  INFO 16992 --- [search-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms

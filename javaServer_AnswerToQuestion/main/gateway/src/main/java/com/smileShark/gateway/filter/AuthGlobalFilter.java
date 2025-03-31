@@ -30,7 +30,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         // 判断是否需要登录拦截
         RequestPath path = request.getPath();
-        if(antPathMatcher.match(path.toString(), "/user/login/**")){
+        if(antPathMatcher.match(path.toString(), "/user/login")){
             // 不需要登录拦截
             return chain.filter(exchange);
         }

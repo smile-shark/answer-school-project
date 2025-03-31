@@ -12,6 +12,7 @@ import com.smileShark.answerQuestion.script.PythonScript;
 import com.smileShark.answerQuestion.service.QuestionAndAnswerService;
 import com.smileShark.answerQuestion.utils.JwtUtils;
 import com.smileShark.answerQuestion.utils.ThreadUtils;
+import com.smileShark.api.utils.UserContext;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,11 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
     private PythonScript pythonScript;
 
     @Override
-    public String getNeedAnswerQuestion(Request request, String jwt) {
+    public String getNeedAnswerQuestion(Request request) {
         Result result = Result.error().setMessage("获取题目失败");
         try {
             PythonResult pythonResult;
-            List<String> subsectionIds=new CopyOnWriteArrayList<>();
-            User user = JwtUtils.parseJWT(jwt,User.class);
+            User user = JSONObject.parseObject(UserContext.getUser(), User.class);
             // 区分用户的需求
             if (request.getSelectSubsectionName() != null && !request.getSelectSubsectionName().isEmpty()) {
                 pythonResult = pythonScript.getQuestionBySubsectionId(user, request.getSelectSubsectionName());
@@ -61,10 +61,10 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
     }
 
     @Override
-    public String answerQuestion(Request request, String jwt) {
+    public String answerQuestion(Request request) {
         Result result=Result.error().setData("回答失败");
         try{
-            User user = JwtUtils.parseJWT(jwt,User.class);
+            User user = JSONObject.parseObject(UserContext.getUser(), User.class);
             PythonResult allQuestions = pythonScript.getAllQuestions(user, request.getSubsectionId());
             result=Result.success().setMessage("回答成功")
                     .setData(allQuestions);
@@ -75,9 +75,9 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
     }
 
     @Override
-    public void addQuestion(String jwt) {
+    public void addQuestion() {
         try {
-            User user = JwtUtils.parseJWT(jwt,User.class);
+            User user = JSONObject.parseObject(UserContext.getUser(), User.class);
             ThreadUtils.executorService.execute(()-> {
                 try {
                     pythonScript.saveQuestion(user);

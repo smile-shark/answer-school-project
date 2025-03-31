@@ -9,7 +9,8 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848 # Nacos服务地址
-        namespace: ff3d9c26-d64e-40a2-ae0c-a4b1ae7af205
+        username: nacos
+        password: nacos
     gateway:
       httpclient:
         sensitive-headers:
