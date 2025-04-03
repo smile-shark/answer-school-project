@@ -1,5 +1,6 @@
     package com.smileShark.config;
 
+    import com.smileShark.api.client.fallback.SearchClientFallbackFactory;
     import com.smileShark.api.utils.HandlerRequestUTF8;
     import com.smileShark.api.utils.UserContext;
     import feign.Logger;
@@ -21,5 +22,9 @@
                             HandlerRequestUTF8.handleRequest(UserContext.getUser()));
                 }
             };
+        }
+        @Bean
+        public SearchClientFallbackFactory searchClientFallbackFactory(){
+            return new SearchClientFallbackFactory();
         }
     }

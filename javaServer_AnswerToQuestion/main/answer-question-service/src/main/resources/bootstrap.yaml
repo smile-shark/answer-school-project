@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: answer-question-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+      config:
+        username: nacos
+        password: nacos
+#        shared-configs:
+#          - dataId: shared-jdbc.yaml
+#          - dataId: shared-log.yaml
+  config:
+    import:
+      - optional:nacos:shared-jdbc.yaml
+      - optional:nacos:shared-log.yaml
+      - optional:nacos:shared-sentinel.yaml

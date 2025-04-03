@@ -9,3 +9,6 @@ jdbc:
 mybatis:
   aliases:
     package: com.smileShark.answerQuestion.entity
+feign:
+  sentinel:
+    enabled: true

@@ -5,6 +5,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.smileShark.search.common.Request;
 import com.smileShark.search.common.Result;
+import com.smileShark.search.config.SearchConfig;
 import com.smileShark.search.entity.Answer;
 import com.smileShark.search.entity.AnswerData;
 import com.smileShark.search.entity.Question;
@@ -12,6 +13,7 @@ import com.smileShark.search.entity.QuestionAndAnswer;
 import com.smileShark.search.mapper.QuestionAndAnswerMapper;
 import com.smileShark.search.service.QuestionAndAnswerService;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,10 +27,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Data
 @Slf4j
 @Service
-@PropertySource("classpath:another-config.properties")
+@RequiredArgsConstructor
 public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
-    @Value("${mysql.data.split.string}")
-    private String splitString;
+    private final SearchConfig searchConfig;
     @Autowired
     private QuestionAndAnswerMapper questionAndAnswerMapper;
 
@@ -44,7 +45,7 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
         buffer.append("%");
         try {
             List<Question> questions = new CopyOnWriteArrayList<>();
-            Page<QuestionAndAnswer> page = PageHelper.startPage(request.getIndex(), 10);
+            Page<QuestionAndAnswer> page = PageHelper.startPage(request.getIndex(), searchConfig.getSize());
             questionAndAnswerMapper.selectQuestionAndAnswerByQuestion(
                     buffer.toString()).forEach(questionAndAnswer -> {
                         questions.add(new Question() {{
@@ -75,7 +76,7 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
 
     private List<Answer> makeAnswers(String answers) {
         List<Answer> answerList = new CopyOnWriteArrayList<>();
-        List<String> list = Arrays.asList(answers.split(splitString));
+        List<String> list = Arrays.asList(answers.split(searchConfig.getSplitString()));
         for (int i = 0; i < list.size(); i += 2) {
             Answer answer = new Answer();
             answer.setAnswerId(list.get(i));

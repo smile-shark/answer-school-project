@@ -1,35 +1,36 @@
 server:
   port: 8080 # 网关服务端口
-spring:
-  application:
-    name: gateway # 网关服务名称
-  main:
-    web-application-type: reactive # 开启响应式编程
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848 # Nacos服务地址
-        username: nacos
-        password: nacos
-    gateway:
-      httpclient:
-        sensitive-headers:
-      routes:
-        - id: search # 路由规则id，自定义唯一
-          uri: lb://search-service # 路由目标微服务，lb代表负载均衡
-          predicates: # 路由条件，满足所有条件才路由到目标微服务
-            - Path=/search/** # 请求路径，匹配/search/**路径的请求都路由到目标微服务
-          filters:
-            - AddRequestHeader=headerName,headerValue # 单个路径下的过滤配置
-            # - PrintAny # 或者是配置到这里
-        - id: answerQuestion
-          uri: lb://answer-question-service
-          predicates:
-            - Path=/answerQuestion/**
-        - id: user
-          uri: lb://user-service
-          predicates:
-            - Path=/user/**
-      default-filters:
-        - AddRequestHeader=headerName,headerValue # 全局路径下的过滤配置
-        - PrintAny=2,3,4
+
+#spring:
+#  application:
+#    name: gateway # 网关服务名称
+#  main:
+#    web-application-type: reactive # 开启响应式编程
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 # Nacos服务地址
+#        username: nacos
+#        password: nacos
+#    gateway:
+#      httpclient:
+#        sensitive-headers:
+#      routes:
+#        - id: search # 路由规则id，自定义唯一
+#          uri: lb://search-service # 路由目标微服务，lb代表负载均衡
+#          predicates: # 路由条件，满足所有条件才路由到目标微服务
+#            - Path=/search/** # 请求路径，匹配/search/**路径的请求都路由到目标微服务
+#          filters:
+#            - AddRequestHeader=headerName,headerValue # 单个路径下的过滤配置
+#            # - PrintAny # 或者是配置到这里
+#        - id: answerQuestion
+#          uri: lb://answer-question-service
+#          predicates:
+#            - Path=/answerQuestion/**
+#        - id: user
+#          uri: lb://user-service
+#          predicates:
+#            - Path=/user/**
+#      default-filters:
+#        - AddRequestHeader=headerName,headerValue # 全局路径下的过滤配置
+#        - PrintAny=2,3,4

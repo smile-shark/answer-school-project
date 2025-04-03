@@ -1,0 +1,10 @@
+server:
+  port: 8084
+jdbc:
+  host: localhost
+  port: 3306
+  database: school_question_data
+  username: root
+  password: password
+mybatis:
+  type-aliases-package: com.smileShark.scripts.entity

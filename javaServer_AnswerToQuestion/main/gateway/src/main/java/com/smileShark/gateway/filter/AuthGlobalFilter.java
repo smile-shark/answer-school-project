@@ -1,7 +1,7 @@
 package com.smileShark.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.smileShark.common.Result;
+import com.smileShark.api.dto.Result;
 import com.smileShark.scripts.entity.User;
 import com.smileShark.user.utils.JwtUtils;
 import lombok.RequiredArgsConstructor;
