@@ -1,5 +1,6 @@
 package com.smileShark.search.service.imp;
 
+import cn.hutool.core.thread.ThreadUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -19,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,6 +36,7 @@ public class QuestionAndAnswerServiceImp implements QuestionAndAnswerService {
     private QuestionAndAnswerMapper questionAndAnswerMapper;
 
     @Override
+    @Transactional
     public String selectAnswersByQuestion(Request request) {
         Result result = Result.error().setMessage("查询失败");
 

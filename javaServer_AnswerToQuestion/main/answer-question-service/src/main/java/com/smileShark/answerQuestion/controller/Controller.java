@@ -12,6 +12,7 @@ import com.smileShark.answerQuestion.service.SubsectionService;
 import com.smileShark.api.client.SearchClient;
 import com.smileShark.api.utils.UserContext;
 import lombok.RequiredArgsConstructor;
+import org.apache.seata.spring.annotation.GlobalTransactional;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -66,6 +67,7 @@ public class Controller {
         return "OK";
     }
     @RequestMapping("/search/test")
+    @GlobalTransactional // 开启分布式事务
     public String search(@RequestBody Request request) {
         String user = UserContext.getUser();
         System.out.println(JSONObject.parse(user));
