@@ -1,31 +1,78 @@
 <template>
-  <div id="tool-select-questions-view-container" style="text-align: left;line-height: normal;width: 100%;height: 100%;">
+  <div
+    id="tool-select-questions-view-container"
+    style="text-align: left; line-height: normal; width: 100%; height: 100%"
+  >
     <div class="select-questions-title">
-      <span>Topic Search Tool</span><span style="font-size: 12px;"> 这里是空空的一行</span>
-      <span style="float:right;"><label class="label77">
-          <input class="inp77" size="16" type="search" placeholder="请输入题目关键字" v-model="searchStr"
-            @keyup.enter="pageIndex = 1; searchQuestions()" required>
-          <span class="search-btn77" @click="pageIndex = 1; searchQuestions()"></span>
-        </label></span>
+      <span>Topic Search Tool</span
+      ><span style="font-size: 12px"> 搜索工具</span>
+      <span style="float: right"
+        ><label class="label77">
+          <input
+            class="inp77"
+            size="16"
+            type="search"
+            placeholder="请输入题目关键字"
+            v-model="searchStr"
+            @keyup.enter="
+              pageIndex = 1;
+              searchQuestions();
+            "
+            required
+          />
+          <span
+            class="search-btn77"
+            @click="
+              pageIndex = 1;
+              searchQuestions();
+            "
+          ></span> </label
+      ></span>
     </div>
     <div class="select-questions-content" v-loading="loading">
-      <div class="question-answer-container" v-for="(item, index) in answerList.questions" v-bind:key="index">
-        <div class="question-title" v-html="'第' + (index + 1) + '题:\n' + item.question"
-          style="font-weight:bold;font-size: 18px;"></div>
+      <div
+        class="question-answer-container"
+        v-for="(item, index) in answerList.records"
+        v-bind:key="index"
+      >
+        <div
+          class="question-title"
+          v-html="'第' + (index + 1) + '题:\n' + item.question"
+          style="font-weight: bold; font-size: 18px"
+        ></div>
         <div class="answer-list">
-          <div v-for="(answer, indexA) in item.answers" v-bind:key="indexA"
+          <div
+            v-for="(answer, indexA) in item.answerList"
+            v-bind:key="indexA"
             v-html="'答案' + (indexA + 1) + ':' + answer.answer"
-            :style="{ color: answer.answerId!='该位置为错误答案' ? '#67c23a' : 'black', fontWeight: answer.isTrue ? 'bold' : 'normal' }"
-            class="answer-item-box">
-          </div>
+            :style="{
+              color:
+                answer.isTrue ? '#67c23a' : 'black',
+              fontWeight: answer.isTrue ? 'bold' : 'normal',
+            }"
+            class="answer-item-box"
+          ></div>
         </div>
-        <hr>
+        <hr />
       </div>
     </div>
-    <div style="text-align: center;margin-top: 20px;">
-      <el-pagination background layout="prev, pager, next" hide-on-single-page @current-change="handleCurrentChange"
-        @prev-click="pageIndex--; serachQuestions()" @next-click="pageIndex++; searchQuestions()"
-        :current-page="pageIndex" :total="answerList.dataCount">
+    <div style="text-align: center; margin-top: 20px">
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        hide-on-single-page
+        @current-change="handleCurrentChange"
+        @prev-click="
+          pageIndex--;
+          serachQuestions();
+        "
+        @next-click="
+          pageIndex++;
+          searchQuestions();
+        "
+        :current-page="pageIndex"
+        :total="answerList.total"
+      >
       </el-pagination>
     </div>
   </div>
@@ -33,53 +80,74 @@
 
 <script>
 /* eslint-disable */
-import axios from '@/axios'
+import axios from "@/axios";
 export default {
   data() {
     return {
-      activeIndex: '2',
+      activeIndex: "2",
       searchStr: null,
       pageIndex: 1,
       answerList: {},
-      loading: false
-    }
+      loading: false,
+    };
   },
   methods: {
     searchQuestions() {
-      if (this.searchStr === '') {
+      if (this.searchStr === "") {
         this.$message({
-          message: '请输入题目关键字',
-          type: 'warning'
-        })
-        return
+          message: "请输入题目关键字",
+          type: "warning",
+        });
+        return;
       }
-      this.loading = true
-      axios.post('/javaSever/selectAnswers', { question: this.searchStr, index: this.pageIndex }).then(res => {
-        if (res.data.code != 200) {
-            this.loading = false
+      this.loading = true;
+      axios
+        .post("/javaSever/questionAndAnswer/page-list", {
+          question: this.searchStr,
+          index: this.pageIndex,
+        })
+        .then((res) => {
+          if (res.data.code != 200) {
+            this.loading = false;
             this.$message({
               message: res.data.message,
-              type: 'error'
-            })
-          return
-        }
-        this.answerList = res.data.data
-        this.loading = false
-        this.$message({
-          message: res.data.message,
-          type: 'success'
-        })
-      }).catch(err => {
-          this.loading = false
+              type: "error",
+            });
+            return;
+          }
+          // 处理获取到的答案
+          for (let question of res.data.data.records) {
+            question.answerList = [];
+            question.question=question.question.replace(/\/oss\/api\/ImageViewer\//g,"https://ai.cqzuxia.com/oss/api/ImageViewer/")
+            let splitList = question.answers.split("LBT_1534_LX_5212_WZL_4818");
+            for (let i = 0; i < splitList.length; i+=2) {
+              // 偶数索引为id，奇数索引为答案，一个id对应一个答案
+              let answer = {
+                answer: splitList[i+1].replace(/\/oss\/api\/ImageViewer\//g,"https://ai.cqzuxia.com/oss/api/ImageViewer/"),
+                isTrue: splitList[i]!="该位置为错误答案",
+              }
+              question.answerList.push(answer)
+            }
+          }
+
+          this.answerList = res.data.data;
+          this.loading = false;
           this.$message({
-            message: '请求失败',
-            type: 'error'
-          })
+            message: res.data.message,
+            type: "success",
+          });
         })
+        .catch((err) => {
+          this.loading = false;
+          this.$message({
+            message: "请求失败",
+            type: "error",
+          });
+        });
     },
     handleCurrentChange(pag) {
-      this.pageIndex = pag
-      this.searchQuestions()
+      this.pageIndex = pag;
+      this.searchQuestions();
     },
     /**
     filteredAnswerList(obj) {
@@ -92,8 +160,8 @@ export default {
       }
       return obj
     } */
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -133,7 +201,7 @@ export default {
 }
 
 .search-btn77:before {
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   border: 2px solid rgba(0, 0, 0, 0.6);
@@ -145,7 +213,7 @@ export default {
 }
 
 .search-btn77:after {
-  content: '';
+  content: "";
   width: 2px;
   height: 8px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -164,11 +232,11 @@ export default {
   border: 1px solid #19b65a;
 }
 
-.inp77:valid+.search-btn77:before {
+.inp77:valid + .search-btn77:before {
   border: 2px solid #19b65a;
 }
 
-.inp77:valid+.search-btn77:after {
+.inp77:valid + .search-btn77:after {
   background-color: #19b65a;
 }
 
@@ -177,13 +245,13 @@ export default {
   padding: 10px;
 }
 
-.select-questions-title>span {
+.select-questions-title > span {
   height: 60px;
   line-height: 60px;
   color: #19b65a;
   font-weight: bold;
   font-size: 30px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .select-questions-content {

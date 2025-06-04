@@ -6,7 +6,7 @@ import sys
 import pymysql
 import getAnswers1
 import MysqlConfig
-import result.PythonResult as PythonResult
+import PythonResult as PythonResult
 import getCountUseCourseId as getSubIds
 import answerQuestionsBySection as answer
 

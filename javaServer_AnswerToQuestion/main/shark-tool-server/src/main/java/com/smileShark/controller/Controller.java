@@ -3,6 +3,7 @@ package com.smileShark.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.smileShark.common.Request;
 import com.smileShark.common.Result;
+import com.smileShark.exception.BusinessException;
 import com.smileShark.service.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -21,14 +22,18 @@ public class Controller {
 
     //确认是否登录结束
     @RequestMapping("/loginIn")
-    public String loginIn() {
-        return JSONObject.toJSONString(Result.success());
+    public Result loginIn() {
+        return Result.success();
     }
 
     //登陆接口
     @RequestMapping("/login")
-    public String login(@RequestBody Request request, HttpServletRequest httpServletRequest) {
-        return userService.login(request, httpServletRequest);
+    public Result login(@RequestBody Request request, HttpServletRequest httpServletRequest) {
+        try {
+            return userService.login(request, httpServletRequest);
+        } catch (IOException | InterruptedException e) {
+            throw new BusinessException("登录失败", 500);
+        }
     }
 
     //获取问题列表接口

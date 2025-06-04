@@ -1,18 +1,80 @@
-2025-04-04 08:51:47.809  INFO 29680 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
-2025-04-04 08:51:49.106  INFO 29680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2025-04-04 08:51:49.133  INFO 29680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt. Will be trying the next url if available
-2025-04-04 08:51:49.133  WARN 29680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt
-2025-04-04 08:51:49.139  INFO 29680 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : The following 1 profile is active: "dev"
-2025-04-04 08:51:49.145  INFO 29680 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
-2025-04-04 08:51:49.637  INFO 29680 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98b5b704-d85d-3d02-9c06-4485f7da37db
-2025-04-04 08:51:49.646  WARN 29680 --- [gateway] [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.nacos.NacosConfigAutoConfiguration' of type [com.alibaba.cloud.nacos.NacosConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [nacosAnnotationProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2025-04-04 08:51:49.949  INFO 29680 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-04 08:51:49.951  INFO 29680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-04-04 08:51:49.952  INFO 29680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-04-04 08:51:49.956  INFO 29680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-04 08:51:49.965  INFO 29680 --- [gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-04 08:51:49.965  INFO 29680 --- [gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-04-04 08:51:50.046 DEBUG 29680 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 更新路由配置[
+2025-05-14 08:07:53.114  INFO 6660 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 08:07:53.899  INFO 6660 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2025-05-14 08:07:53.952  INFO 6660 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt. Will be trying the next url if available
+2025-05-14 08:07:53.952  WARN 6660 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt
+2025-05-14 08:07:53.959  INFO 6660 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : The following 1 profile is active: "dev"
+2025-05-14 08:07:53.966  INFO 6660 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 08:07:54.551  INFO 6660 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98b5b704-d85d-3d02-9c06-4485f7da37db
+2025-05-14 08:07:54.564  WARN 6660 --- [gateway] [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.nacos.NacosConfigAutoConfiguration' of type [com.alibaba.cloud.nacos.NacosConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [nacosAnnotationProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-05-14 08:07:54.929  INFO 6660 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-14 08:07:54.931  INFO 6660 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-05-14 08:07:54.932  INFO 6660 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-05-14 08:07:54.947  INFO 6660 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-14 08:07:54.958  INFO 6660 --- [gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14 08:07:54.958  INFO 6660 --- [gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-14 08:07:55.464  WARN 6660 --- [gateway] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dynamicRouteLoader': Invocation of init method failed
+2025-05-14 08:07:55.465  INFO 6660 --- [gateway] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-14 08:07:55.515  INFO 6660 --- [gateway] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-14 08:07:55.533 ERROR 6660 --- [gateway] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dynamicRouteLoader': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:423) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.3.jar:3.4.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.3.jar:3.4.3]
+	at com.smileShark.gateway.GateWayApplication.main(GateWayApplication.java:9) ~[classes/:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:STARTING
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:645) ~[nacos-client-2.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.requestProxy(ClientWorker.java:1220) ~[nacos-client-2.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfigInner(ClientWorker.java:1162) ~[nacos-client-2.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:1153) ~[nacos-client-2.4.2.jar:na]
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigAndSignListener(NacosConfigService.java:107) ~[nacos-client-2.4.2.jar:na]
+	at com.smileShark.gateway.routers.DynamicRouteLoader.initRouteConfigListener(DynamicRouteLoader.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.2.3.jar:6.2.3]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.2.3.jar:6.2.3]
+	... 20 common frames omitted
+
+2025-05-14 08:07:55.535  WARN 6660 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-05-14 08:07:55.535  WARN 6660 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-05-14 08:07:55.535  WARN 6660 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-05-14 08:07:55.536  WARN 6660 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-05-14 08:07:55.536  WARN 6660 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-05-14 08:09:04.339  INFO 22680 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 08:09:04.757  INFO 22680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2025-05-14 08:09:04.811  INFO 22680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt. Will be trying the next url if available
+2025-05-14 08:09:04.812  WARN 22680 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt
+2025-05-14 08:09:04.823  INFO 22680 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : The following 1 profile is active: "dev"
+2025-05-14 08:09:04.837  INFO 22680 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 08:09:05.800  INFO 22680 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98b5b704-d85d-3d02-9c06-4485f7da37db
+2025-05-14 08:09:05.817  WARN 22680 --- [gateway] [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.nacos.NacosConfigAutoConfiguration' of type [com.alibaba.cloud.nacos.NacosConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [nacosAnnotationProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-05-14 08:09:06.281  INFO 22680 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-14 08:09:06.284  INFO 22680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-05-14 08:09:06.285  INFO 22680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-05-14 08:09:06.289  INFO 22680 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-14 08:09:06.303  INFO 22680 --- [gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14 08:09:06.303  INFO 22680 --- [gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-14 08:09:06.435 DEBUG 22680 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 更新路由配置[
     {
         "id":"search",
         "uri":"lb://search-service",
@@ -50,59 +112,54 @@
         ]
     }
 ]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2025-04-04 08:51:50.516  INFO 29680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2025-04-04 08:51:50.587 DEBUG 29680 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 路由配置更新完成
-2025-04-04 08:51:51.626  INFO 29680 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 08:51:52.637  INFO 29680 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 08:51:52.727  INFO 29680 --- [gateway] [main] c.a.c.s.SentinelWebFluxAutoConfiguration : [Sentinel Starter] register Sentinel SentinelWebFluxFilter
-2025-04-04 08:51:53.758  INFO 29680 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 08:51:53.814  WARN 29680 --- [gateway] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-04-04 08:51:53.868  INFO 29680 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http)
-2025-04-04 08:51:54.881  INFO 29680 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 08:51:55.892  INFO 29680 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 08:51:55.903  INFO 29680 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-04-04 08:51:55.903  INFO 29680 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-04-04 08:51:55.998  INFO 29680 --- [gateway] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 169.254.172.160:8080 register finished
-2025-04-04 08:51:56.009  INFO 29680 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : Started GateWayApplication in 10.792 seconds (process running for 11.341)
-2025-04-04 08:51:56.011  INFO 29680 --- [gateway] [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=shared-log.yaml, group=DEFAULT_GROUP
-2025-04-04 09:34:37.725  WARN 29680 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-04-04 09:34:37.725  WARN 29680 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-04-04 09:34:37.725  WARN 29680 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-04-04 09:34:37.726  WARN 29680 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-04-04 09:34:37.726  WARN 29680 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-04-04 09:34:37.726  WARN 29680 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-04-04 09:34:37.729  INFO 29680 --- [gateway] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-04 09:34:37.736  INFO 29680 --- [gateway] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-04 09:34:37.755  INFO 29680 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-04-04 09:34:37.764  INFO 29680 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2025-04-04 09:34:46.986  INFO 20672 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
-2025-04-04 09:34:48.267  INFO 20672 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2025-04-04 09:34:48.299  INFO 20672 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt. Will be trying the next url if available
-2025-04-04 09:34:48.299  WARN 20672 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt
-2025-04-04 09:34:48.307  INFO 20672 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : The following 1 profile is active: "dev"
-2025-04-04 09:34:48.316  INFO 20672 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
-2025-04-04 09:34:48.854  INFO 20672 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98b5b704-d85d-3d02-9c06-4485f7da37db
-2025-04-04 09:34:48.865  WARN 20672 --- [gateway] [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.nacos.NacosConfigAutoConfiguration' of type [com.alibaba.cloud.nacos.NacosConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [nacosAnnotationProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2025-04-04 09:34:49.129  INFO 20672 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-04 09:34:49.131  INFO 20672 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2025-04-04 09:34:49.131  INFO 20672 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-2025-04-04 09:34:49.133  INFO 20672 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-2025-04-04 09:34:49.142  INFO 20672 --- [gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-04 09:34:49.143  INFO 20672 --- [gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-04-04 09:34:49.213 DEBUG 20672 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 更新路由配置[
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-05-14 08:09:07.085  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-05-14 08:09:07.086  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-05-14 08:09:07.086  INFO 22680 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-05-14 08:09:07.179 DEBUG 22680 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 路由配置更新完成
+2025-05-14 08:09:07.325  INFO 22680 --- [gateway] [main] c.a.c.s.SentinelWebFluxAutoConfiguration : [Sentinel Starter] register Sentinel SentinelWebFluxFilter
+2025-05-14 08:09:07.457  WARN 22680 --- [gateway] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14 08:09:07.523  INFO 22680 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http)
+2025-05-14 08:09:07.546  INFO 22680 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-05-14 08:09:07.546  INFO 22680 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-05-14 08:09:07.653  INFO 22680 --- [gateway] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.24.196:8080 register finished
+2025-05-14 08:09:07.664  INFO 22680 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : Started GateWayApplication in 6.258 seconds (process running for 7.177)
+2025-05-14 08:09:07.668  INFO 22680 --- [gateway] [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=shared-log.yaml, group=DEFAULT_GROUP
+2025-05-14 09:33:39.263  WARN 22680 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-05-14 09:33:39.263  WARN 22680 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-05-14 09:33:39.263  WARN 22680 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-05-14 09:33:39.293  WARN 22680 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-05-14 09:33:39.301  WARN 22680 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-05-14 09:33:39.317  WARN 22680 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-05-14 09:33:39.511  INFO 22680 --- [gateway] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14 09:33:39.575  INFO 22680 --- [gateway] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14 09:33:39.831  INFO 22680 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-05-14 09:33:39.893  INFO 22680 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-05-14 16:13:01.575  INFO 32616 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 16:13:01.974  INFO 32616 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2025-05-14 16:13:02.026  INFO 32616 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt. Will be trying the next url if available
+2025-05-14 16:13:02.026  WARN 32616 --- [gateway] [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/gateway/dev": Connection refused: getsockopt
+2025-05-14 16:13:02.037  INFO 32616 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : The following 1 profile is active: "dev"
+2025-05-14 16:13:02.051  INFO 32616 --- [gateway] [main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] Load config[dataId=shared-log.yaml, group=DEFAULT_GROUP] success
+2025-05-14 16:13:02.980  INFO 32616 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=98b5b704-d85d-3d02-9c06-4485f7da37db
+2025-05-14 16:13:02.993  WARN 32616 --- [gateway] [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.nacos.NacosConfigAutoConfiguration' of type [com.alibaba.cloud.nacos.NacosConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [nacosAnnotationProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-05-14 16:13:03.365  INFO 32616 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-14 16:13:03.369  INFO 32616 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-05-14 16:13:03.369  INFO 32616 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-05-14 16:13:03.373  INFO 32616 --- [gateway] [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-05-14 16:13:03.387  INFO 32616 --- [gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14 16:13:03.387  INFO 32616 --- [gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-14 16:13:03.505 DEBUG 32616 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 更新路由配置[
     {
         "id":"search",
         "uri":"lb://search-service",
@@ -140,41 +197,36 @@
         ]
     }
 ]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2025-04-04 09:34:49.602  INFO 20672 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2025-04-04 09:34:49.665 DEBUG 20672 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 路由配置更新完成
-2025-04-04 09:34:50.692  INFO 20672 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 09:34:51.713  INFO 20672 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 09:34:51.779  INFO 20672 --- [gateway] [main] c.a.c.s.SentinelWebFluxAutoConfiguration : [Sentinel Starter] register Sentinel SentinelWebFluxFilter
-2025-04-04 09:34:52.811  INFO 20672 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 09:34:52.869  WARN 20672 --- [gateway] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-04-04 09:34:52.922  INFO 20672 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http)
-2025-04-04 09:34:53.929  INFO 20672 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 09:34:54.944  INFO 20672 --- [gateway] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2025-04-04 09:34:54.956  INFO 20672 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2025-04-04 09:34:54.956  INFO 20672 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2025-04-04 09:34:55.043  INFO 20672 --- [gateway] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.0.134:8080 register finished
-2025-04-04 09:34:55.055  INFO 20672 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : Started GateWayApplication in 10.811 seconds (process running for 11.328)
-2025-04-04 09:34:55.058  INFO 20672 --- [gateway] [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=shared-log.yaml, group=DEFAULT_GROUP
-2025-04-04 11:22:46.946  WARN 20672 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2025-04-04 11:22:46.946  WARN 20672 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
-2025-04-04 11:22:46.946  WARN 20672 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2025-04-04 11:22:46.947  WARN 20672 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2025-04-04 11:22:46.948  WARN 20672 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
-2025-04-04 11:22:46.949  WARN 20672 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2025-04-04 11:22:46.953  INFO 20672 --- [gateway] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-04 11:22:46.961  INFO 20672 --- [gateway] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-04 11:22:46.977  INFO 20672 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2025-04-04 11:22:46.988  INFO 20672 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-05-14 16:13:04.045  INFO 32616 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-05-14 16:13:04.121 DEBUG 32616 --- [gateway] [main] c.s.gateway.routers.DynamicRouteLoader   : 路由配置更新完成
+2025-05-14 16:13:04.267  INFO 32616 --- [gateway] [main] c.a.c.s.SentinelWebFluxAutoConfiguration : [Sentinel Starter] register Sentinel SentinelWebFluxFilter
+2025-05-14 16:13:04.409  WARN 32616 --- [gateway] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14 16:13:04.488  INFO 32616 --- [gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http)
+2025-05-14 16:13:04.514  INFO 32616 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-05-14 16:13:04.514  INFO 32616 --- [gateway] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-05-14 16:13:04.621  INFO 32616 --- [gateway] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.24.196:8080 register finished
+2025-05-14 16:13:04.640  INFO 32616 --- [gateway] [main] c.smileShark.gateway.GateWayApplication  : Started GateWayApplication in 5.372 seconds (process running for 6.107)
+2025-05-14 16:13:04.643  INFO 32616 --- [gateway] [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=shared-log.yaml, group=DEFAULT_GROUP
+2025-05-14 17:43:21.075  WARN 32616 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2025-05-14 17:43:21.074  WARN 32616 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2025-05-14 17:43:21.075  WARN 32616 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2025-05-14 17:43:21.080  WARN 32616 --- [gateway] [Thread-8] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2025-05-14 17:43:21.080  WARN 32616 --- [gateway] [Thread-1] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Destruction of the end
+2025-05-14 17:43:21.082  WARN 32616 --- [gateway] [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2025-05-14 17:43:21.105  INFO 32616 --- [gateway] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14 17:43:21.117  INFO 32616 --- [gateway] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14 17:43:21.157  INFO 32616 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2025-05-14 17:43:21.175  INFO 32616 --- [gateway] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.

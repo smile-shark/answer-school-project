@@ -1,8 +1,8 @@
 import requests
 import json
 import sys
-import result.PythonResult as PythonResult
-import result.URL as URL
+import PythonResult as PythonResult
+import URL as URL
 import getToken
 import os
 curPath = os.path.abspath(os.path.dirname(__file__))

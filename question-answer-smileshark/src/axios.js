@@ -16,7 +16,7 @@ axiosInstance.interceptors.request.use(
     config => {
         const jwtToken = localStorage.getItem('token')
         if (jwtToken) {
-            config.headers['token'] = jwtToken
+            config.headers['Authorization'] = jwtToken
         }
         return config;
     },

@@ -2,7 +2,7 @@ import requests
 import sys
 import os
 import json
-import result.PythonResult as PythonResult
+import PythonResult as PythonResult
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]

@@ -12,3 +12,10 @@ mybatis:
 feign:
   sentinel:
     enabled: true
+spring:
+  rabbitmq:
+    host: localhost # 主机名
+    port: 5672 # 端口号
+    virtual-host: /answer-quesiton # 虚拟主机
+    username: answer-question # 用户名
+    password: 123456 # 密码

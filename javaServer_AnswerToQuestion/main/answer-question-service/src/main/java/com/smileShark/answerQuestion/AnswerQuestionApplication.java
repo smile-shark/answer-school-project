@@ -2,6 +2,8 @@ package com.smileShark.answerQuestion;
 
 import com.smileShark.config.DefaultFeignConfig;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -24,5 +26,9 @@ public class AnswerQuestionApplication {
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
+    }
+    @Bean
+    public MessageConverter messageConverter(){
+        return new Jackson2JsonMessageConverter();
     }
 }

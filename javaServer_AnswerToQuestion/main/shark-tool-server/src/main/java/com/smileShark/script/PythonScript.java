@@ -88,4 +88,12 @@ public class PythonScript {
                 courseId
         );
     }
+
+    public PythonResult teacherLogin(Request request) throws IOException, InterruptedException {
+        return pythonScriptsUtils.usePythonScript(
+                pythonPath.PYTHON_SCRIPTS_PATH_TEACHER_LOGIN,
+                request.getUserId(),
+                request.getUserPassword()
+        );
+    }
 }

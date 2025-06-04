@@ -17,7 +17,7 @@ port = 3306
 # port = 3306
 
 # git fetch --all
-#
+
 # docker rm school-server -f
 # docker rmi project-docker-school-server
 # docker build -t project-docker-school-server .

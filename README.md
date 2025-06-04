@@ -1,5 +1,11 @@
-# 服务学校账号的项目
-重庆足下软件学院
+# 自动完成考试（内置Python脚本）
+重庆足下软件学院：https://ai.cqzuxia.com/
+
+本版本已不更新，请移步至最新版本：https://github.com/smile-shark/auto-finish-exam
+
+## 技术栈
+
+Python+SpirngBoot+Vue+Mybaits+Docker
 
 ## 使用Docker部署
 
@@ -24,18 +30,10 @@
    > source /docker-entrypoint-initdb.d/init.sql
    ```
 
-### **目前包括：**
+### **本项目包括：**
 
 * 自动评估
 * 题目搜索
-
-### **待开发：**
-
-* 自动考试：获取考试页面题目
-* 自动日精进：接入AI
-  
-
-*当前阶段：* 更新原始项目，技术进阶
 
 ## 更新日志：
 > 2025/3/4 

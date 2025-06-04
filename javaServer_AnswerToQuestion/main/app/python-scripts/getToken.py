@@ -1,6 +1,6 @@
 import requests
-import result.URL as URL
-import result.PythonResult as PythonResult
+import URL as URL
+import PythonResult as PythonResult
 import sys
 
 session = requests.session()

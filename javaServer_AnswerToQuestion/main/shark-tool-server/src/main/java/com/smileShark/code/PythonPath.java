@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource("classpath:python-scripts-path.properties")
 public class PythonPath {
+    @Value("${TEACHER_LOGIN}")
+    public String PYTHON_SCRIPTS_PATH_TEACHER_LOGIN ;
     @Value("${LOGIN}")
     public String PYTHON_SCRIPTS_PATH_LOGIN;
     @Value("${GTE_SOME_ID}")

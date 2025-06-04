@@ -17,11 +17,12 @@ import java.io.IOException;
 @Slf4j
 @WebFilter(urlPatterns = "/*")
 public class ServerFilter implements Filter {
+    public static final ThreadLocal<User> userThreadLocal = new ThreadLocal<>();
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-        System.out.println("ServerFilter执行...");
+        log.info("ServerFilter执行...");
 
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
@@ -29,9 +30,15 @@ public class ServerFilter implements Filter {
         resp.setCharacterEncoding("UTF-8");
 
         String url = req.getRequestURL().toString();
+        String requestURI = req.getRequestURI();
 
         log.info("请求的url：{}", url);
-        if (url.contains("login") && !url.contains("loginIn")) {
+        if(requestURI.contains("swagger")
+        || requestURI.startsWith("/v3/api-docs")){
+            filterChain.doFilter(servletRequest, servletResponse);
+        }
+
+        if (requestURI.startsWith("/login") && !requestURI.contains("/loginIn")) {
             log.info("登陆操作，放行...");
             filterChain.doFilter(servletRequest, servletResponse);
             return;
@@ -51,7 +58,8 @@ public class ServerFilter implements Filter {
 
         // 解析token，判断是否合法
         try {
-            JwtUtils.parseJWT(jwt, User.class);
+            User user = JwtUtils.parseJWT(jwt, User.class);
+            userThreadLocal.set(user);
         } catch (Exception e) {
             log.info("token解析失败，拦截请求...");
             resp.getWriter().write(JSONObject.toJSONString(new Result() {{
@@ -64,5 +72,11 @@ public class ServerFilter implements Filter {
         }
         log.info("令牌合法，放行");
         filterChain.doFilter(servletRequest, servletResponse);
+    }
+
+    @Override
+    public void destroy() {
+        // 清理资源
+        userThreadLocal.remove();
     }
 }

@@ -6,6 +6,12 @@ import LoginView from '../views/form/LoginFormView.vue'
 import ToolSelectQuestionsView from '../views/form/Tool/ToolSelectQuestionsView.vue'
 import ToolFinishQuestionsView from '../views/form/Tool/ToolFinishQuestionsView.vue'
 import CompleteDailySummaryView from '../views/form/Tool/CompleteDailySummaryView.vue'
+import ToolTeacherFinishTestExam from '@/views/form/Tool/ToolTeacherFinishTestExam.vue'
+import AdminHome from '@/views/admin/AdminHome.vue'
+import Home from '@/views/admin/page/Home.vue'
+import AdminCourseList from '@/views/admin/page/AdminCourseList.vue'
+import AdminUserList from '@/views/admin/page/AdminUserList.vue'
+
 
 Vue.use(VueRouter)
 
@@ -14,6 +20,11 @@ const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
   {
     path: '/main',
@@ -38,13 +49,34 @@ const routes = [
         path: '/CompleteDaily',
         name: 'completeDaily',
         component: CompleteDailySummaryView
+      }, {
+        path: '/TeacherFinishTestExam',
+        name: 'teacherFinishTestExam',
+        component: ToolTeacherFinishTestExam
       }
     ]
   },
   {
-    path: '/login',
-    name: 'login',
-    component: LoginView
+    path: '/admin',
+    name: 'admin',
+    component: AdminHome,
+    children: [
+      {
+        path: '',
+        name: 'adminHome',
+        component: Home
+      },
+      {
+        path: '/admin/courseList',
+        name: 'adminCourseList',
+        component: AdminCourseList
+      },
+      {
+        path: '/admin/userList',
+        name: 'adminUserList',
+        component: AdminUserList
+      }
+    ]
   }
 ]
 

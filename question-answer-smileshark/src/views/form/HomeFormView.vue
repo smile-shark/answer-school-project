@@ -6,14 +6,14 @@
           <div class="grid-content bg-purple text-center">
             <img src="../../assets/image/icon.png" class="logo-img">
             <span class="text-center"> SharkTool </span>
-            <span class="text-center-two">about how to do work</span>
+            <span class="text-center-two">帮助你更好的完成工作</span>
           </div>
         </el-col>
         <!-- 间隔行 -->
-        <el-col :xs="5" :sm="5" :md="9" :lg="12" :xl="14">
+        <el-col :xs="5" :sm="5" :md="9" :lg="11" :xl="14">
           <div class="grid-content bg-purple-light"></div>
         </el-col>
-        <el-col :xs="8" :sm="8" :md="6" :lg="5" :xl="4">
+        <el-col :xs="8" :sm="8" :md="6" :lg="6" :xl="4">
           <div class="grid-content bg-purple">
             <el-menu :default-active="activeIndex" class="el-menu-demo new-box-weight" mode="horizontal"
               active-text-color="#19b65a">
@@ -22,13 +22,16 @@
                 <template slot="title">工具箱</template>
                 <el-menu-item index="2-1" @click="SelectQuestion">评估题目搜索</el-menu-item>
                 <el-menu-item index="2-2" @click="FinishQuestion">评估自动答题</el-menu-item>
-                <el-menu-item index="2-3" @click="ToCompleteDaily">日精进一键完成</el-menu-item>
+                <el-menu-item index="2-3" @click="$router.push('/TeacherFinishTestExam')">教师测评一键完成</el-menu-item>
+                <el-menu-item index="2-4" @click="ToCompleteDaily">日精进一键完成</el-menu-item>
               </el-submenu>
-              <el-menu-item index="3" @click="exitToolBox">退出</el-menu-item>
-              <el-tooltip :content="'背景颜色：' + backgroundColor" placement="top">
+              <el-menu-item index="3" @click="dialogVisible = true">QQ群</el-menu-item>
+              <el-menu-item index="4" @click="exitToolBox">退出</el-menu-item>
+              <el-menu-item index="5"><el-tooltip :content="'背景颜色：' + backgroundColor" placement="top">
                 <el-switch active-color="#19b65a" v-model="backgroundColor" active-value="流光背景" inactive-value="原背景"
                   @change="changeBgColor"></el-switch>
-              </el-tooltip>
+              </el-tooltip></el-menu-item>
+              
             </el-menu>
           </div>
         </el-col>
@@ -41,6 +44,19 @@
         </router-view>
       </div>
     </el-main>
+
+    <el-dialog
+      :visible.sync="dialogVisible"
+      title="加入QQ群：958803816"
+      width="30%"
+      @opened="dialogOpened"
+      @closed="dialogClosed"
+    >
+    <img src="@/assets/image/qq-group.jpg" style="width:100%;"/>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="confirmDialog">确 定</el-button>
+      </span>
+    </el-dialog>
   </el-container>
 </template>
 
@@ -52,7 +68,8 @@ export default {
       activeIndex: '1',
       value2: false,
       backgroundColor: '原背景',
-      backgroungColorIsTrue: false
+      backgroungColorIsTrue: false,
+      dialogVisible: false, // 控制弹出框的显示和隐藏
     };
   },
   methods: {
@@ -81,7 +98,27 @@ export default {
     },
     ToCompleteDaily() {
       window.location.href.includes('CompleteDaily') ? '' : this.$router.push('/CompleteDaily');
-    }
+    },
+    dialogOpened() {
+      // 弹出框打开时的动画效果
+      this.$nextTick(() => {
+        const dialog = this.$refs.dialog.$el;
+        dialog.style.transition = "transform 0.3s ease";
+        dialog.style.transform = "scale(1)";
+      });
+    },
+    dialogClosed() {
+      // 弹出框关闭时的动画效果
+      this.$nextTick(() => {
+        const dialog = this.$refs.dialog.$el;
+        dialog.style.transition = "transform 0.3s ease";
+        dialog.style.transform = "scale(0)";
+      });
+    },
+        confirmDialog() {
+      // 确认操作
+      this.dialogVisible = false;
+    },
   },
   mounted() {
     this.$notify({
@@ -104,19 +141,27 @@ export default {
       position: 'top-right',
       offset: 100
     })
-
-
     if (localStorage.getItem('backgroundColor') === '流光背景') {
       this.backgroungColorIsTrue = true
       this.backgroundColor = '流光背景'
     } else {
       this.backgroungColorIsTrue = false
     }
+    setTimeout(() => {
+      this.dialogVisible = true;
+    }, 500);
+
+
   }
 }
 </script>
 
-<style>
+<style scoped>
+/* 自定义弹出框的样式 */
+.el-dialog {
+  transform: scale(0); /* 初始状态缩放为0 */
+  transition: transform 0.3s ease; /* 添加动画效果 */
+}
 html {
   height: 100vh;
 }

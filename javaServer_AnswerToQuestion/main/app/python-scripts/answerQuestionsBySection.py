@@ -4,7 +4,7 @@ import json
 import pymysql
 import sys
 import os
-import result.PythonResult as PythonResult
+import PythonResult as PythonResult
 import MysqlConfig
 
 curPath = os.path.abspath(os.path.dirname(__file__))
